@@ -171,7 +171,7 @@ else{
                                                    <label for="password">Password</label>
                                                </div>
                                                <div class="col s12 right-align m-t-sm">
-                                                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo3O9DLgToJ9_JPln0nPbTZP5iHmhCglqBgX8uNMGoaqh9yQ/viewform" style="color:orange">Belum punya akun? daftar disini</a><br><br>
+                                                   <a href="signup.php" style="color:orange">Belum punya akun? daftar disini</a><br><br>
 
                                                    <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn orange dark-1">
                                                </div>

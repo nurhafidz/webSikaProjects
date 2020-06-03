@@ -1,6 +1,11 @@
 <?php
 session_start();
 error_reporting(0);
+$conn = new mysqli("localhost","root","","k5222396_elms");
+$count=0;
+$sql2="SELECT * FROM tblemployees WHERE Status = 0";
+$result=mysqli_query($conn, $sql2);
+$count=mysqli_num_rows($result);
 include('includes/config.php');
 if(strlen($_SESSION['alogin'])==0)
     {   
@@ -184,6 +189,7 @@ if($stats==1){
         <script src="../assets/plugins/peity/jquery.peity.min.js"></script>
         <script src="../assets/js/alpha.min.js"></script>
         <script src="../assets/js/pages/dashboard.js"></script>
+        <script src="../assets/js/custom.js"></script>
         
     </body>
 </html>

@@ -1,6 +1,53 @@
 <?php
+extract($_POST);
 include('includes/config.php');
+$conn = new mysqli("localhost","root","","k5222396_elms");
+$count=0;
+if (isset($_POST['signup'])) {
+    $firstname =$_POST['firstname'];
+    $lastname =$_POST['lastname'];
+    $email =$_POST['email'];
+    $gender =$_POST['gender'];
+    $Password =$_POST['password'];
+    $dob =$_POST['dob'];
+    $department =$_POST['department'];
+    $Address =$_POST['Address'];
+    $city =$_POST['city'];
+    $Country =$_POST['Country'];
+    $mobileno =$_POST['telp'];
+    $EmpId ='abc';
+    $Status ='0';
+
+   $encryptPassword = password_hash($Password, PASSWORD_DEFAULT);
+    
+    $sql = "INSERT INTO tblemployees (EmpId,FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,City,Country,Phonenumber,Status) 
+    VALUES (:empId,:fname,:lname,:email,:pass,:gender,:dob,:department,:address,:city,:country,:mobileno,'$Status')";
+    $stmt = $dbh->prepare($sql);
+    $params = array(
+   ':fname' => $firstname,
+   ':lname' => $lastname,
+   ':email' => $email,
+   ':pass' => $encryptPassword,
+   ':gender' => $gender,
+   ':dob' => $dob,
+   ':department' => $department,
+   ':address' => $Address,
+   ':city' => $city,
+   ':country' => $Country,
+   ':mobileno' => $mobileno,
+   ':empId' => $EmpId,
+   );
+
+    $saved = $stmt->execute($params);
+
+   if($saved) header("Location: index.php");
+   
+}
+$sql2="SELECT * FROM tblemployees WHERE Status = 0";
+$result=mysqli_query($conn, $sql2);
+$count=mysqli_num_rows($result);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,13 +64,20 @@ include('includes/config.php');
     <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+
+   
+
 </head>
 <body>
+
 <div class="loader-bg"></div>
         <div class="loader">
             <div class="preloader-wrapper big active">
@@ -65,6 +119,7 @@ include('includes/config.php');
                 </div>
             </div>
         </div>
+        
         <div class="mn-content fixed-sidebar">
             <header class="mn-header navbar-fixed">
                 <nav class="orange darken-1">
@@ -107,17 +162,23 @@ include('includes/config.php');
             </aside>
             <main class="mn-inner">
                 <div class="row">
+                
                 <div class="col s12">
                         <div class="page-title"><h4 style="text-align:center">SikaProjects</h4></div>
+                        
+			   <button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn"><span id="notification-count"><?php if($count>0) { echo $count; } ?></span><i class="material-icons">notifications_none</i></button>
+				 <div id="notification-latest"></div>
+
+	<?php if(isset($success)) { ?> <div class="success"><?php echo $success;?></div> <?php } ?>
                     </div>
                     <div class="col s12">
                           <div class=" s12 m6 l8 offset-l2 offset-m3">
                               <div class="card white darken-1">
-
+            
                                   <div class="card-content ">
                                       <span class="card-title" style="font-size:20px;">Employee Sign Up</span>
                                        <div class="row">
-                                           <form class="col s12" name="signup" onSubmit="return validate();" method="post">
+                                           <form class="col s12" name="frmNotification" onSubmit="return validate();" method="post" id="frmNotification">
                                                <div class="input-field col s6">
                                                    <input id="firstname" type="text" name="firstname" class="validate" autocomplete="off" required >
                                                    <label for="firstname">First Name</label>
@@ -132,7 +193,7 @@ include('includes/config.php');
                                                </div>
                                                <div class="input-field col s6">
                                                    <select id="gender" type="text" name="gender" class="validate" autocomplete="off" required >
-                                                   <option >Gender</option>
+                                                   <option value="">Gender</option>
                                                    <option value="Male">Male</option>
                                                    <option value="Female">Female</option>
                                                    <option value="Other">Other</option>
@@ -150,8 +211,8 @@ include('includes/config.php');
                                                <div class="input-field col s12">
                                                </div>
                                                <div class="input-field col s6">
-                                               <select  name="department" autocomplete="off" required>
-                                                    <option value="">Department</option>
+                                               <select name="department" autocomplete="off" required>
+                                                    <option value="" disable>Department</option>
                                                     <?php $sql = "SELECT DepartmentName from tbldepartments";
                                                     $query = $dbh -> prepare($sql);
                                                     $query->execute();
@@ -160,7 +221,7 @@ include('includes/config.php');
                                                     if($query->rowCount() > 0)
                                                     {
                                                     foreach($results as $resultt)
-                                                    {   ?>                                            
+                                                    {   ?>
                                                     <option value="<?php echo htmlentities($resultt->DepartmentName);?>"><?php echo htmlentities($resultt->DepartmentName);?></option>
                                                     <?php }} ?>
                                                 </select>
@@ -178,7 +239,7 @@ include('includes/config.php');
                                                    <label for="Country">Country</label>
                                                </div>
                                                <div class="input-field col s12">
-                                                   <input id="makepassword" type="password" class="validate" name="makepassword" autocomplete="off" required>
+                                                   <input id="makepassword" type="password" class="validate" name="password" autocomplete="off" required>
                                                    <label for="password">Password</label>
                                                </div>
                                                <div class="input-field col s12">
@@ -197,7 +258,7 @@ include('includes/config.php');
                     </div>
                 </div>
             </main>
-
+                                                        
         </div>
         <div class="left-sidebar-hover"></div>
     <!-- Javascripts -->
@@ -206,16 +267,6 @@ include('includes/config.php');
     <script src="assets/plugins/material-preloader/js/materialPreloader.min.js"></script>
     <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
     <script src="assets/js/alpha.min.js"></script>
-    <script src="assets/js/custom.min.js"></script>
-    <script>
-    function validate(){
-
-        var a = document.getElementById("makepassword").value;
-        var b = document.getElementById("confirm_password").value;
-        if (a!=b) {
-        alert("Passwords do no match");
-        return false;
-        }}
-    </script>
+    <script type="text/javascript" src="assets/js/custom.js"></script>
 </body>
 </html>
