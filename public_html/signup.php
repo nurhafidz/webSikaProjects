@@ -18,7 +18,7 @@ if (isset($_POST['signup'])) {
     $EmpId ='abc';
     $Status ='0';
 
-   $encryptPassword = password_hash($Password, PASSWORD_DEFAULT);
+   $encryptPassword = md5($Password, PASSWORD_DEFAULT);
     
     $sql = "INSERT INTO tblemployees (EmpId,FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,City,Country,Phonenumber,Status) 
     VALUES (:empId,:fname,:lname,:email,:pass,:gender,:dob,:department,:address,:city,:country,:mobileno,'$Status')";
