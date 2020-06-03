@@ -166,10 +166,10 @@ $count=mysqli_num_rows($result);
                 <div class="col s12">
                         <div class="page-title"><h4 style="text-align:center">SikaProjects</h4></div>
                         
-			   <button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn"><span id="notification-count"><?php if($count>0) { echo $count; } ?></span><i class="material-icons">notifications_none</i></button>
+			   <!-- <button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn"><span id="notification-count"><?php if($count>0) { echo $count; } ?></span><i class="material-icons">notifications_none</i></button>
 				 <div id="notification-latest"></div>
 
-	<?php if(isset($success)) { ?> <div class="success"><?php echo $success;?></div> <?php } ?>
+	<?php if(isset($success)) { ?> <div class="success"><?php echo $success;?></div> <?php } ?> -->
                     </div>
                     <div class="col s12">
                           <div class=" s12 m6 l8 offset-l2 offset-m3">

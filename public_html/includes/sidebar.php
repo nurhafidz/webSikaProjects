@@ -44,7 +44,7 @@ foreach($results as $result)
                     </li>
                 <li class="no-padding orange darken-2">
                                
-                <a class="waves-effect waves-grey" " href="https://docs.google.com/forms/d/e/1FAIpQLSeyE0O7MKeWywYl4EAmWksnYZsapnkNiD1JdmCUySyUWSvfHA/viewform">isi Formulir WP Aproval</a>
+                <a class="waves-effect waves-grey" " href="form.php">isi Formulir WP Aproval</a>
                      </li> 
 
 

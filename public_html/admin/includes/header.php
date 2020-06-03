@@ -54,15 +54,19 @@
                       
                         <ul class="right col s9 m3 nav-right-menu">
                         
-                            <li><button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn"><span id="notification-count"><?php if($count>0) { echo $count; } ?></span><i class="material-icons">notifications_none</i></button>
-				 <div id="notification-latest"></div>
+                        <li><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i>
+<?php 
+$isread=0;
+$sql = "SELECT id from tblleaves where IsRead=:isread";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':isread',$isread,PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$unreadcount=$query->rowCount();?>
 
-	<?php if(isset($success)) { ?> <div class="success"><?php echo $success;?></div> <?php } ?>
-                            </li>
-                            <li>
-                            <span id="notification-count"><?php if($count>0) { echo $count; } ?></span>
-                            </li>
-                           
+
+                                <span class="badge"><?php echo htmlentities($unreadcount);?></span></a></li>
+
                         </ul>
                         
                         <ul id="dropdown1" class="dropdown-content notifications-dropdown">
