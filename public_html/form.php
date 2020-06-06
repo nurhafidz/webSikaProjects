@@ -32,34 +32,11 @@ $eid=$_SESSION['emplogin'];
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
 
 <style>
-#inputText {
-      margin-left: 20px;
-}
-#inputCheckbox {
-    position: absolute;
-    top: 0px;
-    margin-top: 0px;
-    .fileUpload {
-    position: relative;
-    overflow: hidden;
-    margin: 10px;
-}
-.fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
-
 
 </style>
+<script>
 
+</script>
     </head>
     <body>
   <?php include('includes/header.php');?>
@@ -73,7 +50,7 @@ $eid=$_SESSION['emplogin'];
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                <form id="example-form" method="post" >
+                                <form id="example-form" method="POST" action="saveform.php" enctype="multipart/form-data">
                                 <div class="container">
                                     <h3>Approval online PT. PLN (Persero)</h3>
                                     <div id="myDIV">
@@ -82,7 +59,7 @@ $eid=$_SESSION['emplogin'];
                                     <br>
                                     <div class="input-field">
                                         <label for="email">Email</label>
-                                        <input id="email" type="text" name="email" class="validate" autocomplete="off" required >
+                                        <input id="email" type="text" name="email" class="validate" autocomplete="off" >
                                     </div>
                                     <button class="waves-effect waves-light btn orange dark-1" onclick="myform()">next</button>
                                     </div>
@@ -101,37 +78,37 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <div class="input-field">
                                             <label for="">Tanggal Pengajuan </label>
-                                            <input id="mydiv11"  type="date" name="" class="validate datepicker" autocomplete="off" required  >
+                                            <input id="mydiv11"  type="date" name="tanggal_pengajuan" class="validate datepicker" autocomplete="off" required  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Jenis Pekerjaan </label>
-                                            <input id="mydiv12"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv12"  type="text" name="jenis_pekerjaan" class="validate" autocomplete="off" required  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Detail Pekerjaan </label>
-                                            <input id="mydiv13"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv13"  type="text" name="detail_pekerjaan" class="validate" autocomplete="off" required  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Lokasi Pekerjaan </label>
-                                            <input id="mydiv14"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv14"  type="text" name="lokasi_pekerjaan" class="validate" autocomplete="off" required  >
                                         </div>
                                         <p for="">Pengawas Pekerjaan</p>
                                         <div class="input-field col s6">
                                             <label for="">Nama Lengkap</label>
-                                            <input id="mydiv15"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv15"  type="text" name="Pengawas_Pekerjaan" class="validate" autocomplete="off" required  >
                                         </div>
                                         <div class="input-field col s6">
                                             <label for="">Nomor Telepon</label>
-                                            <input id="mydiv16"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv16"  type="text" name="telp1" class="validate" autocomplete="off" required  >
                                         </div>
-                                        <p for="">Pengawas Pekerjaan</p>
+                                        <p for="">Pengawas K3</p>
                                         <div class="input-field col s6">
                                             <label for="">Nama Lengkap</label>
-                                            <input id="mydiv17"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv17"  type="text" name="Pengawas_K3" class="validate" autocomplete="off" required  >
                                         </div>
                                         <div class="input-field col s6">
                                             <label for="">Nomor Telepon</label>
-                                            <input id="mydiv18"  type="text" name="" class="validate " autocomplete="off" required  >
+                                            <input id="mydiv18"  type="text" name="telp2" class="validate" autocomplete="off" required  >
                                         </div>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform2()">back</button>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform3()">next</button>
@@ -142,25 +119,25 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <div class="input-field col s5">
                                             <p for="">Tanggal Mulai </p>
-                                            <input id="mydiv21"  type="date" name="" class="validate datepicker" autocomplete="off" required  >
+                                            <input required id="mydiv21"  type="date" name="Tanggal_Mulai" class="validate datepicker" autocomplete="off"  >
                                         </div>
                                         <div class="input-field col s2 " >
                                         <p style="text-align: center">-</p>
                                         </div>
                                         <div class="input-field col s5">
                                             <p for="">Tanggal selesai </p>
-                                            <input id="mydiv22"  type="date" name="" class="validate datepicker" autocomplete="off" required  >
+                                            <input required id="mydiv22"  type="date" name="Tanggal_selesai" class="validate datepicker" autocomplete="off"  >
                                         </div>
                                         <div class="input-field col s5">
                                             <p for="">Jam Mulai </p>
-                                            <input id="mydiv23"  type="time" name="" class="validate" autocomplete="off" required  >
+                                            <input required id="mydiv23"  type="time" name="Jam_Mulai" class="validate" autocomplete="off"  >
                                         </div>
                                         <div class="input-field col s2 " >
                                         <p style="text-align: center">-</p>
                                         </div>
                                         <div class="input-field col s5">
                                             <p for="">Jam selesai </p>
-                                            <input id="mydiv24"  type="time" name="" class="validate" autocomplete="off" required  >
+                                            <input required id="mydiv24"  type="time" name="Jam_selesai" class="validate" autocomplete="off"  >
                                         </div>
                                         
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform3()">back</button>
@@ -172,42 +149,42 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <p>Pilih klasifikasi</p>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv31"  value="Bike">
+                                            <input  type="checkbox" id="mydiv31" name="ck1[]"  value="Pekerjaan Bertegangan Listrik">
                                             <label for="mydiv31"> Pekerjaan Bertegangan Listrik</label><br>
                                         </div>
                                         
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv32"  value="Bike">
+                                            <input  type="checkbox" id="mydiv32" name="ck1[]"  value="Pekerjaan Confined Spac">
                                             <label for="mydiv32"> Pekerjaan Confined Space</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv33"  value="Bike">
+                                            <input  type="checkbox" id="mydiv33" name="ck1[]"  value="Pekerjaan Panas">
                                             <label for="mydiv33"> Pekerjaan Panas</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv34"  value="Bike">
+                                            <input  type="checkbox" id="mydiv34" name="ck1[]"  value="Pekerjaan di ketinggian">
                                             <label for="mydiv34"> Pekerjaan di ketinggian</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv35"  value="Bike">
+                                            <input  type="checkbox" id="mydiv35" name="ck1[]"  value="Pekerjaan Penggalian">
                                             <label for="mydiv35"> Pekerjaan Penggalian</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv36"  value="Bike">
+                                            <input  type="checkbox" id="mydiv36" name="ck1[]"  value="Pekerjaan Penanaman Tiang">
                                             <label for="mydiv36"> Pekerjaan Penanaman Tiang</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv37"  value="Bike">
+                                            <input  type="checkbox" id="mydiv37" name="ck1[]"  value="Pekerjaan Perampalan Pohon (ROW)">
                                             <label for="mydiv37"> Pekerjaan Perampalan Pohon (ROW)</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv38"  value="Bike">
+                                            <input  type="checkbox" id="mydiv38" name="ck1[]"  value="Pekerjaan Sipil">
                                             <label for="mydiv38"> Pekerjaan Sipil </label><br>
                                         </div>
 
@@ -221,47 +198,47 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <p>Pilih Prosedur</p>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv41"  value="Bike">
+                                            <input  type="checkbox" id="mydiv41" name="ck2[]" value="Pemeliharaan Fuse Cut Out">
                                             <label for="mydiv41"> Pemeliharaan Fuse Cut Out</label><br>
                                         </div>
                                         
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv42"  value="Bike">
+                                            <input  type="checkbox" id="mydiv42" name="ck2[]" value="Bongkar Pasang Trafo Portal">
                                             <label for="mydiv42"> Bongkar Pasang Trafo Portal</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv43"  value="Bike">
+                                            <input  type="checkbox" id="mydiv43" name="ck2[]" value="Pemeliharaan SUTM (Perabasan)">
                                             <label for="mydiv43"> Pemeliharaan SUTM (Perabasan)</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv44"  value="Bike">
+                                            <input  type="checkbox" id="mydiv44" name="ck2[]" value="Pemeliharaan SUTM (Perbaikan Kawat terburai/rantas)">
                                             <label for="mydiv44"> Pemeliharaan SUTM (Perbaikan Kawat terburai/rantas)</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv45"  value="Bike">
+                                            <input  type="checkbox" id="mydiv45" name="ck2[]" value="Pemeliharaan Arrester pada gardu">
                                             <label for="mydiv45"> Pemeliharaan Arrester pada gardu</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv46"  value="Bike">
+                                            <input  type="checkbox" id="mydiv46" name="ck2[]" value="Pemeliharaan Isolator">
                                             <label for="mydiv46"> Pemeliharaan Isolator</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv47"  value="Bike">
+                                            <input  type="checkbox" id="mydiv47" name="ck2[]" value="Pemeliharaan LBS dan RECLOSER">
                                             <label for="mydiv47"> Pemeliharaan LBS dan RECLOSER</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv48"  value="Bike">
+                                            <input  type="checkbox" id="mydiv48" name="ck2[]" value="Bongkar dan Pasang Tiang Beton">
                                             <label for="mydiv48"> Bongkar dan Pasang Tiang Beton </label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv49"  value="Bike">
+                                            <input  type="checkbox" id="mydiv49" name="ck2[]" value="Pemeliharaan Cubikie Gardu Bangunan">
                                             <label for="mydiv49"> Pemeliharaan Cubikie Gardu Bangunan </label><br>
                                         </div>
 
@@ -275,30 +252,30 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <div class="input-field ">
                                             <p for="mydiv51"> Identifikasi Bahaya, Penilaian dan Pengendalian Resiko </p><br>
-                                            <input id="mydiv51" type="file" class="custom-file-input waves-effect waves-light btn orange dark-1" require id="mydiv51">
+                                            <input required id="mydiv51" name="img_resiko" type="file" class="custom-file-input waves-effect waves-light btn orange dark-1" >
                                         </div>
                                         
                                         <div class="input-field ">
                                             <p for="mydiv52"> Job Safety Analysis</p><br>
-                                            <input id="mydiv52" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" require id="mydiv52">
+                                            <input required id="mydiv52" name="img_analysis" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" >
                                         </div>
 
                                         <div class="input-field ">
                                             <p for="mydiv53"> Prosedur Kerja</p><br>
-                                            <input id="mydiv53" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" require id="mydiv53">
+                                            <input required id="mydiv53" name="img_prosedur_kerja" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" >
                                         </div>
 
                                         <div class="input-field ">
                                             <p for="mydiv54"> Sertifikat Kompetensi Pekerja</p><br>
-                                            <input id="mydiv54" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" require id="mydiv54">
+                                            <input required id="mydiv54" name="img_pekerja" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" >
                                         </div>
                                         
                                         <br>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform6()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform7()">next</button>
+                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform7()">back</button>
+                                        
                                     </div>
-
-                                    <div id="myDIV8" style="display: none;" >
+                                    <div id="myDIV8"  style="display: none;">
                                         <h5>2. Job Safety Analysis</h5>
                                         <br>
                                         <p>Harap siapkan 4 dokumen : Prosedur bekerja, Job safety analysis, Sertifikat Kompetensi Bekerja, dan Identifikasi Bahaya, Penilaian dan Pengendalian Resiko untuk di-upload ke bagian akhir di form berikut ini (klik Berikutnya)</p>
@@ -312,28 +289,28 @@ $eid=$_SESSION['emplogin'];
                                         <h5>A. INFORMASI PEKERJAAN</h5>
                                         <br>
                                         <div class="input-field">
-                                            <label for="">Tanggal </label>
-                                            <input id="mydiv61"  type="date" name="" class="validate datepicker" autocomplete="off" required  >
+                                            <label for="">Tanggal</label>
+                                            <input id="mydiv61"  type="date" name="tgl_informasi_pekerjaan2" class="validate datepicker" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Jenis Pekerjaan </label>
-                                            <input id="mydiv62"  type="text" name="" autocomplete="off" required  >
+                                            <input id="mydiv62"  type="text" name="jenis_pekerjaan2" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Lokasi </label>
-                                            <input id="mydiv63"  type="text" name="" autocomplete="off" required  >
+                                            <input id="mydiv63"  type="text" name="lokasi_pekerjaan2" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Perusahaan Pelaksana Pekerjaan </label>
-                                            <input id="mydiv64"  type="text" name="" autocomplete="off" required  >
+                                            <input id="mydiv64"  type="text" name="perusahaan_pelaksana" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Pengawas Pekerjaan </label>
-                                            <input id="mydiv65"  type="text" name="" autocomplete="off" required  >
+                                            <input id="mydiv65"  type="text" name="pengawas_pekerjaan" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Pelaksana Pekerjaan <br>*misal: 1. nama lengkap pelaksana lalu 2, 3, 4, dst..</label><br>
-                                            <input id="mydiv66"  type="text" name="" autocomplete="off" required  >
+                                            <input id="mydiv66"  type="text" name="pelaksana_pekerjaan" autocomplete="off"  >
                                         </div>
                                         
                                         <br>
@@ -346,85 +323,85 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <p>Alat Pelindung diri</p>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv71"  value="Helm">
+                                            <input  type="checkbox" id="mydiv71"  name="ck3[]" value="Helm">
                                             <label for="mydiv71"> Helm</label><br>
                                         </div>
                                         
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv72"  value="Sepatu Keselamatan">
+                                            <input  type="checkbox" id="mydiv72"  name="ck3[]" value="Sepatu Keselamatan">
                                             <label for="mydiv72"> Sepatu Keselamatan</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv73"  value="Kacamata">
+                                            <input  type="checkbox" id="mydiv73"  name="ck3[]" value="Kacamata">
                                             <label for="mydiv73"> Kacamata</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv74"  value="Earplug">
+                                            <input  type="checkbox" id="mydiv74"  name="ck3[]" value="Earplug">
                                             <label for="mydiv74"> Earplug</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv75"  value="Earmuff">
+                                            <input  type="checkbox" id="mydiv75"  name="ck3[]" value="Earmuff">
                                             <label for="mydiv75"> Earmuff</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv76"  value="Sarung tangan katun">
+                                            <input  type="checkbox" id="mydiv76"  name="ck3[]" value="Sarung tangan katun">
                                             <label for="mydiv76"> Sarung tangan katun</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv77"  value="Sarung tangan karet">
+                                            <input  type="checkbox" id="mydiv77"  name="ck3[]" value="Sarung tangan karet">
                                             <label for="mydiv77"> Sarung tangan karet</label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv78"  value="Sarung tangan 20kV">
+                                            <input  type="checkbox" id="mydiv78"  name="ck3[]" value="Sarung tangan 20kV">
                                             <label for="mydiv78"> Sarung tangan 20kV </label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv79"  value="Pelampung/ life Vest">
-                                            <label for="mydiv79"> Pelampung/ life Vest </label><br>
+                                            <input  type="checkbox" id="mydiv79"  name="ck3[]" value="Pelampung life Vest">
+                                            <label for="mydiv79"> Pelampung life Vest </label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv710"  value="Pelampung/ life Vest">
+                                            <input  type="checkbox" id="mydiv710" name="ck3[]" value="Tabung Pernafasan">
                                             <label for="mydiv710"> Tabung Pernafasan </label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv711"  value="Pelampung/ life Vest">
+                                            <input  type="checkbox" id="mydiv711" name="ck3[]" value="Full-Body Harness">
                                             <label for="mydiv711"> Full-Body Harness </label><br>
                                         </div>
 
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv712"  value="Pelampung/ life Vest">
+                                            <input  type="checkbox" id="mydiv712" name="ck3[]" value="Yang lain:">
                                             <label for="mydiv712"> Yang lain: </label><br>
                                         </div>
                                         <br>
                                         <br>
                                         <p>Perlengkapan keselamatan & darurat</p>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv81"  value="Pemadam Api (APAR dll)">
+                                            <input  type="checkbox" id="mydiv81" name="ck4[]" value="Pemadam Api (APAR dll)">
                                             <label for="mydiv81"> Pemadam Api (APAR dll)</label><br>
                                         </div>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv82"  value="Rambu Keselamatan">
+                                            <input  type="checkbox" id="mydiv82" name="ck4[]" value="Rambu Keselamatan">
                                             <label for="mydiv82"> Rambu Keselamatan</label><br>
                                         </div>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv83"  value="LOTO (lock out tag out)">
+                                            <input  type="checkbox" id="mydiv83" name="ck4[]" value="LOTO (lock out tag out)">
                                             <label for="mydiv83"> LOTO (lock out tag out)</label><br>
                                         </div>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv84"  value="Radio Telekomunikasi">
+                                            <input  type="checkbox" id="mydiv84" name="ck4[]" value="Radio Telekomunikasi">
                                             <label for="mydiv84"> Radio Telekomunikasi</label><br>
                                         </div>
                                         <div class="input-field ">
-                                            <input  type="checkbox" id="mydiv85"  value="Yang lain:">
+                                            <input  type="checkbox" id="mydiv85" name="ck4[]" value="Yang lain:">
                                             <label for="mydiv85"> Yang lain:</label><br>
                                         </div>
                                         
@@ -448,108 +425,20 @@ $eid=$_SESSION['emplogin'];
                                         <img src="assets/images/Capture73983279.jpg" alt="">
                                         <br>
                                         <div class="input-field ">
-                                            <p for="mydiv91"> Sertifikat Kompetensi Pekerja</p><br>
-                                            <input  type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" require id="mydiv91">
-                                        </div>
-                                        <div class="input-field ">
                                             <label for="mydiv92"> Uraikan Langkah Pekerjaan</label>
-                                            <input  type="text" require id="mydiv92">
+                                            <input  type="text" name="langkah_pekerjaan"  id="mydiv92">
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv93"> Uraikan Potensi Bahaya dan Resiko</label>
-                                            <input  type="text" require id="mydiv93">
+                                            <input  type="text" name="potensi_bahaya_dan_resiko"  id="mydiv93">
                                         </div>
                                         <div class="input-field ">
-                                            <label for="mydiv94"> Uraikan Potensi Bahaya dan Resiko</label>
-                                            <input  type="text" require id="mydiv94">
+                                            <label for="mydiv94"> Uraikan Tindakan Pengendalian</label>
+                                            <input  type="text" required name="tindakan_pengendalian"  id="mydiv94">
                                         </div>
                                         <br>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform10()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform11()">next</button>
-                                    </div>
-                                    <div id="myDIV12" style="display: none;" >
-                                        <h5>3. Identifikasi Bahaya, Penilaian dan Pengendalian resiko</h5>
-                                        <br>
-                                        <p>HAZARD IDENTIFICATION, RISK ASSESSMENT AND RISK CONTROL (HIRARC)</p>
-                                        
-                                        <br>
-                                        
-                                        <div class="input-field ">
-                                            <label for="mydiv101"> Nama Unit</label>
-                                            <input  type="text"   class="custom-file-input" require id="mydiv101">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv102"> Bidang</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv102">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv103"> Jenis Pekerjaan</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv103">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv104"> No. Dokumen</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv104">
-                                        </div>
-                                        <div class="input-field ">
-                                            <p > Tanggal</p>
-                                            <input   type="date" name="" class="validate datepicker" autocomplete="off" required  >
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv106"> Revisi</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv106">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv107"> Halaman</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv107">
-                                        </div>
-                                        <p>Dasar Penulisan</p>
-                                        <img src="assets/images/Capture29920.jpg" alt="">
-                                        <br>
-
-                                        <p>Perhatian! Isi uraian dengan prosedur terurut yang baik dan benar
-                                        karena masing-masing baris, berkaitan dengan sub-pertanyaan lainnya sesuai dengan form excel manual seperti gambar dibawah ini | contoh format penulisan:
-                                        Kegiatan</p>
-                                        <p>1. ----------</p>
-                                        <p>2. ----------</p>
-                                        <p>3. ----------</p>
-                                        <p>4. dan seterusnya</p>
-
-                                        <div class="input-field ">
-                                            <label for="mydiv108"> Kegiatan</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv108">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv109"> Potensi Bahaya</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv109">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1010"> Resiko</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv1010">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1011"> Konsekuensi</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv1011">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1012"> Kemungkinan</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv1012">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1013"> Tingkat Resiko</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv1013">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1014"> Status Pengendalian</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv1014">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1015"> Penanggung Jawab</label>
-                                            <input  type="text"  class="custom-file-input" require id="mydiv1015">
-                                        </div>  
-                                        <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform11()">back</button>
-                                        <input  type="submit" name="signup" value="Sign up" class="waves-effect waves-light btn orange dark-1">
-                                        
+                                        <input  type="submit" required id="save" name="save" class="waves-effect waves-light btn orange dark-1">
                                     </div>
                                 </div>
                                 </form>
@@ -569,9 +458,7 @@ $eid=$_SESSION['emplogin'];
         <script src="assets/js/alpha.min.js"></script>
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/pages/form_elements.js"></script>
-        <script>
-        
-        </script>
+
     </body>
 </html>
 <?php } ?> 
