@@ -24,6 +24,7 @@ $eid=$_SESSION['emplogin'];
 
 if (isset($_POST['save'])) {
     $id=$result->id;
+    $status='0';
     $email=$_POST['email'];
     //f1
     $tanggal_pengajuan=$_POST['tanggal_pengajuan'];
@@ -65,7 +66,22 @@ if (isset($_POST['save'])) {
     $langkah_pekerjaan=$_POST['langkah_pekerjaan'];
     $potensi_bahaya_dan_resiko=$_POST['potensi_bahaya_dan_resiko'];
     $tindakan_pengendalian=$_POST['tindakan_pengendalian'];
-
+    //f10
+    $nama_unit=$_POST['nama_unit'];
+    $bidang=$_POST['bidang'];
+    $jenis_pekerjaan=$_POST['jenis_pekerjaan'];
+    $no_dokumen=$_POST['no_dokumen'];
+    $tgl3=$_POST['tgl3'];
+    $revisi=$_POST['revisi'];
+    $halaman=$_POST['halaman'];
+    $kegiatan=$_POST['kegiatan'];
+    $potensi_bahaya=$_POST['potensi_bahaya'];
+    $resiko=$_POST['resiko'];
+    $konsekuensi=$_POST['konsekuensi'];
+    $tingkat_resiko=$_POST['tingkat_resiko'];
+    $status_pengendalian=$_POST['status_pengendalian'];
+    $penanggung_jawab=$_POST['penanggung_jawab'];
+    
     $loc_img_resiko="images/imgresiko/";
     $loc_img_analysis="images/imganalysis/";
     $loc_img_prosedur_kerja="images/imgprosedurkerja/";
@@ -87,7 +103,7 @@ if (isset($_POST['save'])) {
 
     if (in_array($imageFileType, $extensions_arr)) {
         $sql = "INSERT INTO tbljobinformation (EmployeesID,
-        DateOfFiling,
+        Date,
         Email,
         TypeOfWork,
         JobDetails,
@@ -105,7 +121,8 @@ if (isset($_POST['save'])) {
         HazardIdentificationImage,
         JobSafetyImage,
         WorkProceduresImage,
-        CertificateOfCompetenceImage
+        CertificateOfCompetenceImage,
+        Status
         ) 
             VALUES (:EmployeesID,
         :DateOfFilin,
@@ -126,7 +143,8 @@ if (isset($_POST['save'])) {
         :HazardIdentificationImage,
         :JobSafetyImage,
         :WorkProceduresImage,
-        :CertificateOfCompetenceImage
+        :CertificateOfCompetenceImage,
+        :status
         )";
         $stmt = $dbh->prepare($sql);
         $params = array(
@@ -150,6 +168,7 @@ if (isset($_POST['save'])) {
         ':JobSafetyImage'=> $img_analysis,
         ':WorkProceduresImage'=> $img_prosedur_kerja,
         ':CertificateOfCompetenceImage'=> $img_pekerja,
+        ':status'=>$status
     );
 
         move_uploaded_file($_FILES['img_resiko']['tmp_name'], $loc_img_resiko.$img_resiko);
@@ -173,7 +192,9 @@ if (isset($_POST['save'])) {
         SafetyEmergencyEquipment,
         JobSteps,
         PotentialDangersAndRisks,
-        ControlMeasures) 
+        ControlMeasures,
+        Status
+        ) 
         VALUES (
         :EmployeesID,
         :Email,
@@ -187,7 +208,8 @@ if (isset($_POST['save'])) {
         :SafetyEmergencyEquipment,
         :JobSteps,
         :PotentialDangersAndRisks,
-        :ControlMeasures
+        :ControlMeasures,
+        :Status
             )";
         $stmt2 = $dbh->prepare($sql2);
         $params2 = array(
@@ -204,53 +226,17 @@ if (isset($_POST['save'])) {
         ':JobSteps'=>$langkah_pekerjaan,
         ':PotentialDangersAndRisks'=>$potensi_bahaya_dan_resiko,
         ':ControlMeasures'=>$tindakan_pengendalian,
+        ':Status'=>$status
         );
         $saved2 = $stmt2->execute($params2);
         if ($saved2) {
-            echo 'berhasil';
+            echo 'berhasil2';
         }
-        }
-    }
-    }
-    if (isset($_POST['save3'])) {
-        
-        
-        $id=$result->id;
-        $email='abc';
-        $nama_unit=$_POST['nama_unit'];
-        $bidang=$_POST['bidang'];
-        $jenis_pekerjaan=$_POST['jenis_pekerjaan'];
-        $no_dokumen=$_POST['no_dokumen'];
-        $tgl3=$_POST['tgl3'];
-        $revisi=$_POST['revisi'];
-        $halaman=$_POST['halaman'];
-        $kegiatan=$_POST['kegiatan'];
-        $potensi_bahaya=$_POST['potensi_bahaya'];
-        $resiko=$_POST['resiko'];
-        $konsekuensi=$_POST['konsekuensi'];
-        $tingkat_resiko=$_POST['tingkat_resiko'];
-        $status_pengendalian=$_POST['status_pengendalian'];
-        $penanggung_jawab=$_POST['penanggung_jawab'];
-        
-    echo "<br>";echo $nama_unit;
-    echo "<br>";echo $bidang;
-    echo "<br>";echo $jenis_pekerjaan;
-    echo "<br>";echo $no_dokumen;
-    echo "<br>";echo $tgl3;
-    echo "<br>";echo $revisi;
-    echo "<br>";echo $halaman;
-    echo "<br>";echo $kegiatan;
-    echo "<br>";echo $potensi_bahaya;
-    echo "<br>";echo $resiko;
-    echo "<br>";echo $konsekuensi;
-    echo "<br>";echo $tingkat_resiko;
-    echo "<br>";echo $status_pengendalian;
-    echo "<br>";echo $penanggung_jawab;
-    
+
         $sql3= $dbh->prepare(" INSERT INTO tblidentification (
-            EmployeesID,Email,UnitName,Field,TypeOfWork,DocumentNumber,Date,Revision,Page,Activity,PotentialHazard,onsequence,Possibility,LevelOfRisk,ControlStatus,PersonInCharge	
+            EmployeesID,Email,UnitName,Field,TypeOfWork,DocumentNumber,Date,Revision,Page,Activity,PotentialHazard,onsequence,Possibility,LevelOfRisk,ControlStatus,PersonInCharge,Status
             ) 
-            VALUES(:EmployeesID,:email,:nama_unit,:bidang,:jenis_pekerjaan,:no_dokumen,:tgl3,:revisi,:halaman,:kegiatan,:potensi_bahaya,:resiko,:konsekuensi,:tingkat_resiko,:status_pengendalian,:penanggung_jawab)");
+            VALUES(:EmployeesID,:email,:nama_unit,:bidang,:jenis_pekerjaan,:no_dokumen,:tgl3,:revisi,:halaman,:kegiatan,:potensi_bahaya,:resiko,:konsekuensi,:tingkat_resiko,:status_pengendalian,:penanggung_jawab,:status)");
             
             $params3 = array(
                 ':EmployeesID'=>$id,
@@ -269,13 +255,17 @@ if (isset($_POST['save'])) {
                 ':tingkat_resiko'=>$tingkat_resiko,
                 ':status_pengendalian'=>$status_pengendalian,
                 ':penanggung_jawab'=>$penanggung_jawab,
+                ':status'=>$status
             );
             $saved3 = $sql3->execute($params3);
             if ($saved3) {
-                echo 'berhasil';
+                echo 'berhasil3';
+                header('location:statuswp.php');
             }
-            
+        }
     }
+    }
+    
 }
 
 
