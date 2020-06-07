@@ -57,12 +57,18 @@
                         <li><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i>
 <?php 
 $isread=0;
-$sql = "SELECT id from tblleaves where IsRead=:isread";
-$query = $dbh -> prepare($sql);
-$query->bindParam(':isread',$isread,PDO::PARAM_STR);
-$query->execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-$unreadcount=$query->rowCount();?>
+$Status=0;
+$sql1 = "SELECT id from  tblemployees where Status=:Status";
+$sql2 = "SELECT id from tblleaves where IsRead=:isread";
+$query1 = $dbh -> prepare($sql1);
+$query2 = $dbh -> prepare($sql2);
+$query1->bindParam(':Status',$Status,PDO::PARAM_STR);
+$query2->bindParam(':isread',$isread,PDO::PARAM_STR);
+$query1->execute();
+$query2->execute();
+$results=$query1->fetchAll(PDO::FETCH_OBJ);
+$results=$query2->fetchAll(PDO::FETCH_OBJ);
+$unreadcount=$query1+$query2->rowCount();?>
 
 
                                 <span class="badge"><?php echo htmlentities($unreadcount);?></span></a></li>
@@ -95,6 +101,30 @@ foreach($results as $result)
                                         </a>
                                     </li>
                                    <?php }} ?>
+<?php 
+$stat=0;
+$sql = "SELECT EmpId,FirstName,LastName,Department,Status,RegDate,id from  tblemployees";
+$query = $dbh -> prepare($sql);
+$query->bindParam(':stat',$status,PDO::PARAM_STR);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+if($query->rowCount() > 0)
+{
+foreach($results as $result)
+{               
+    $Status=$result->Status;
+                                    if($Status=="0"){
+                                    ?> 
+                                    <li>
+                                        <a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>">
+                                        <div class="notification">
+                                            <div class="notification-icon circle cyan"><i class="material-icons">user</i></div>
+                                            <div class="notification-text"><p><b><?php echo htmlentities($result->FirstName." ".$result->LastName);?><br />(<?php echo htmlentities($result->EmpId);?>)</b>New User</p><span>Approv or no <?php echo htmlentities($result->PostingDate);?></b</span></div>
+                                        </div>
+                                        </a>
+                                    </li>
+                                    <?php
+                                    }}} ?>
                                    
                                   
                         </ul>
