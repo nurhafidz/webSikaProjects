@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Jun 2020 pada 15.00
+-- Waktu pembuatan: 08 Jun 2020 pada 15.21
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.2
 
@@ -98,16 +98,9 @@ CREATE TABLE `tblemployees` (
 
 INSERT INTO `tblemployees` (`id`, `EmpId`, `FirstName`, `LastName`, `EmailId`, `Password`, `Gender`, `Dob`, `Department`, `Address`, `City`, `Country`, `Phonenumber`, `Status`, `RegDate`) VALUES
 (2, 'DEMP2132', 'User', 'tes', 'nisa@gmail.com', '28b662d883b6d76fd96e4ddc5e9ba780', 'Female', '19 oktober, 1998', 'Information Technology', 'bandung', 'bandung', 'INA', '9508320163', 1, '2017-11-10 13:40:02'),
-(3, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$T05vdwl9zwizK4lvfxmP7evZ8UfuD3CzEOLLRAPdvJyMHtTdi1vh6', 'Male', '2020-06-01', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 0, '2020-06-02 01:30:46'),
-(7, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$1mafqlqmvqMsuwDvjiU.hu1XWqjtBaQuyQWb6.0mga5trWD/X2ZQy', 'Female', '2020-05-12', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 01:37:27'),
-(8, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$tvCpso9rS/Ch.LSDX/z3L.YzV2KCG1T/GJUUclWu6r3P38Ns6nN96', 'Female', '2020-05-07', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 02:36:55'),
-(9, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$FaTm3vRwSA9Ndrb5uv8Ccubiocyq1JuLDFObI8z1Sa1NKbArufJ9e', 'Female', '2020-06-01', 'Konstruksi', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 02:38:29'),
-(10, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$75Uuy8CKL0CNP.nP6a0mO.hHulRXnTEt83UyfjVReW6rYJgO2FHKa', 'Male', '2020-06-10', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 02:39:42'),
-(11, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$gesXylssJqwISMRL8hni7uk8eJahulqvzvVVY0uElFcz3sYYKLacG', 'Female', '2020-06-01', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 02:59:52'),
-(12, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$yfd/MXaVmdA5pYTn7.oEguPSClNTG8aMh5w96EIPcPvF20P7A.Gl6', 'Male', '2020-06-01', 'Konstruksi', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 03:10:48'),
-(13, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$6sl6LGfOlihluTTwW464.us.jve2ap1jGwNRyNeNOomrNJkvkGXJS', 'Male', '2020-06-01', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 03:12:11'),
-(14, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$OqW9I/33RQOwLRUQZjyV2u/eTAXoieXZV9u/yRfVge3po7tgHiWie', 'Female', '2020-06-01', 'Konstruksi apaaja', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 11:41:11'),
-(15, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '7815696ecbf1c96e6894b779456d330e', 'Female', '2020-06-02', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 0, '2020-06-06 04:30:25');
+(3, 'abc', 'nurhafidz', 'faizal', 'nurhafidzfaizal03@gmail.com', '$2y$10$T05vdwl9zwizK4lvfxmP7evZ8UfuD3CzEOLLRAPdvJyMHtTdi1vh6', 'Male', '2020-06-01', 'Pembuatan Jalan dan gedung BKR', 'jln pesantren VI', 'cimahi', 'Indonesia', '08782271062', 1, '2020-06-02 01:30:46'),
+(16, 'abc', 'nurhafidz', 'asd', 'nuasasf@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Male', '2020-06-01', 'Pembuatan Jalan dan gedung BKR', 'sada', 'sada', 'Indonesia', '12421', 1, '2020-06-08 10:26:29'),
+(17, 'asd', 'asd', 'asd', 'nuasasf@gmail.com', '900150983cd24fb0d6963f7d28e17f72', 'Male', '2020-06-01', 'Pembuatan Jalan dan gedung BKR', 'sada', 'sada', 'Indonesia', '12421', 0, '2020-06-08 11:26:19');
 
 -- --------------------------------------------------------
 
@@ -129,8 +122,13 @@ CREATE TABLE `tblidentification` (
   `Activity` varchar(255) NOT NULL,
   `PotentialHazard` varchar(255) NOT NULL,
   `onsequence` varchar(255) NOT NULL,
-  `Possibility` varchar(255) NOT NULL,
-  `LevelOfRisk` varchar(255) NOT NULL,
+  `Consequences` varchar(200) NOT NULL,
+  `Possibility` varchar(200) NOT NULL,
+  `LevelOfRisk` varchar(200) NOT NULL,
+  `RiskControl` varchar(200) NOT NULL,
+  `Consequences2` varchar(200) NOT NULL,
+  `Possibility2` varchar(255) NOT NULL,
+  `LevelOfRisk2` varchar(255) NOT NULL,
   `ControlStatus` varchar(255) NOT NULL,
   `PersonInCharge` varchar(200) NOT NULL,
   `Status` int(1) NOT NULL,
@@ -197,7 +195,8 @@ INSERT INTO `tblleaves` (`id`, `LeaveType`, `ToDate`, `FromDate`, `Description`,
 (11, 'Restricted Holiday(RH)', '12/05/2020', '20/05/2020', 'gkjhkjkjhkvggjgjhkjhkjh', '2020-05-19 22:56:04', 'OK', '2020-05-20 4:28:53 ', 1, 1, 1),
 (14, 'Dokumen pengajuan ', '31/02/2019', '05/05/2020', 'iya', '2020-05-23 07:53:15', 'Yes', '2020-05-23 13:25:41 ', 1, 1, 2),
 (15, 'Dokumen pengajuan ', '10/04/2020', '10/05/2020', 'Halooonininsms', '2020-05-25 13:23:39', 'Diterima', '2020-05-27 15:35:02 ', 1, 1, 2),
-(16, 'Revisi Dokumen Pengajuan', '21/11/2011', '12/03/2033', '123', '2020-06-03 02:07:17', NULL, NULL, 0, 1, 2);
+(16, 'Revisi Dokumen Pengajuan', '21/11/2011', '12/03/2033', '123', '2020-06-03 02:07:17', NULL, NULL, 0, 1, 2),
+(17, 'Dokumen pengajuan ', '12/03/2033', '12/12/2012', 'asdas', '2020-06-07 23:49:03', NULL, NULL, 0, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -322,7 +321,7 @@ ALTER TABLE `tbldepartments`
 -- AUTO_INCREMENT untuk tabel `tblemployees`
 --
 ALTER TABLE `tblemployees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `tblidentification`
@@ -340,7 +339,7 @@ ALTER TABLE `tbljobinformation`
 -- AUTO_INCREMENT untuk tabel `tblleaves`
 --
 ALTER TABLE `tblleaves`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT untuk tabel `tblleavetype`

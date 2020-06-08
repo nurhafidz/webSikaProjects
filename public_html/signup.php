@@ -15,7 +15,7 @@ if (isset($_POST['signup'])) {
     $city =$_POST['city'];
     $Country =$_POST['Country'];
     $mobileno =$_POST['telp'];
-    $EmpId ='abc';
+    $EmpId =$_POST['EmpId'];
     $Status ='0';
 
    $encryptPassword = md5($Password, PASSWORD_DEFAULT);
@@ -177,6 +177,11 @@ $count=mysqli_num_rows($result);
                                       <span class="card-title" style="font-size:20px;">Employee Sign Up</span>
                                        <div class="row">
                                            <form class="col s12" name="frmNotification" onSubmit="return validate();" method="post" id="frmNotification">
+                                               <div class="input-field col s12">
+                                                   <input id="EmpId" type="text" name="EmpId" class="validate input-field col s6" autocomplete="off" required >
+                                                   <label for="EmpId">Employee Id</label>
+                                               </div>
+                                              
                                                <div class="input-field col s6">
                                                    <input id="firstname" type="text" name="firstname" class="validate" autocomplete="off" required >
                                                    <label for="firstname">First Name</label>

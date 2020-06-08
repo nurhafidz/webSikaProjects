@@ -131,6 +131,7 @@ header('location:formwp.php');
                                             <th>Date</th>
                                             <th>Status</th>
                                             <th>Action</th>
+                                            <th>Print</th>
                                         </tr>
                                     </thead>
                                  
@@ -162,13 +163,14 @@ foreach($results as $result)
 
 
                                              </td>
-                                            <td><a href="showformwp.php?frid=<?php echo htmlentities($result->id);?>"><i class="material-icons">mode_edit</i></a>
+                                            <td><a href="showformwp.php?frid=<?php echo htmlentities($result->id);?>"><i class="material-icons">remove_red_eye</i></a>
                                         
                                         <a type="submit" name="accept" href="formwp.php?ida=<?php echo htmlentities($result->id);?>" > <i class="material-icons" title="Accept">done</i></a>
                                         
                                     
                                         <a type="submit" name="Reject" href="formwp.php?idb=<?php echo htmlentities($result->id);?>" ><i class="material-icons" title="Reject">clear</i></a>
                                      </td>
+                                     <td><a style="possition:right"href="print.php?frid=<?php echo htmlentities($result->id);?>" ><i class="material-icons" title="Print">print</i></a></td>
                                         </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>

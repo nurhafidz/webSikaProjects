@@ -14,7 +14,7 @@ else{
     <head>
         
         <!-- Title -->
-        <title>Employee | Leave History</title>
+        <title>Employee | List Form WP Approval</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
@@ -58,13 +58,13 @@ else{
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title">Leave History</div>
+                        <div class="page-title">List Form WP Approval</div>
                     </div>
                    
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">Leave History</span>
+                                <span class="card-title">List Form WP Approval</span>
                                 <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                 <table id="example" class="display responsive-table ">
                                     <thead>
@@ -73,6 +73,7 @@ else{
                                             <th  width="200">Email</th>
                                             <th>Date</th>
                                             <th>Status</th>
+                                            <th>Print</th>
                                             
                                         </tr>
                                     </thead>
@@ -80,7 +81,7 @@ else{
                                     <tbody>
 <?php 
 $eid=$_SESSION['eid'];
-$sql = "SELECT Email ,Date ,Status from tbljobinformation where EmployeesID=:eid";
+$sql = "SELECT Email ,Date ,Status,id from tbljobinformation where EmployeesID=:eid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 $query->execute();
@@ -109,7 +110,7 @@ foreach($results as $result)
                                             <td>
 
                                             
-                                            <a style="possition:right"href="print.php?frid=<?php echo htmlentities($eid);?>" ><i class="material-icons" title="Print">print</i></a>
+                                            <a style="possition:right"href="print.php?frid=<?php echo htmlentities($result->id);?>" ><i class="material-icons" title="Print">print</i></a>
                                             </td>
                                         </tr>
                                          <?php $cnt++;} }?>

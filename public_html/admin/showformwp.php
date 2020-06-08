@@ -64,6 +64,9 @@ $eid=intval($_GET['frid']);
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
+.div2{
+    margin-top:10px;
+}
 </style>
 
 
@@ -79,7 +82,7 @@ $eid=intval($_GET['frid']);
                 <div class="row">
                     <div class="col s12">
                         <div class="page-title">Show form</div>
-                        <a style="possition:right"href="print.php?frid=<?php echo htmlentities($eid);?>" ><i class="material-icons" title="Print">print</i></a>
+                        
                     </div>
                     <div class="col s12 m12 l12">
                         <div class="card">
@@ -107,7 +110,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?> 
-                                            <div>
+                                            <div clas="div2">
                                                 <h5>A. Informasi Pekerjaan</h5>
                                                 <div class="input-field col s2">
                                                     <p>1. Tanggal Pengajuan</p>
@@ -122,7 +125,7 @@ foreach($results as $result)
                                                     <p>: <?php echo htmlentities($result->TypeOfWork);?></p>
                                                 </div>
                                                 <div class="input-field col s2">
-                                                    <p>3. </p>
+                                                    <p>3. Detail Pekerjaan</p>
                                                 </div>
                                                 <div class="input-field col s10">
                                                     <p>: <?php echo htmlentities($result->JobDetails);?></p>
@@ -157,8 +160,10 @@ foreach($results as $result)
                                                 <div class="input-field col s3">
                                                     <p>: <?php echo htmlentities($result->PhoneNumberOhsSupervisor);?></p>
                                                 </div>
+                                                <div class="input-field col s12">
+                                                </div>
                                             </div>
-                                            <div >
+                                            <div class="div2">
                                                 <h5>B. DURASI PEKERJAAN</h5>
                                                 <div >
                                                     <h6 >Durasi Kerja</h6>
@@ -187,9 +192,11 @@ foreach($results as $result)
                                                 <div class="input-field col s4">
                                                     <p>: <?php echo htmlentities($result->EndTime);?></p>
                                                 </div>
+                                                <div class="input-field col s12">
+                                                </div>
                                                 
                                             </div>
-                                            <div >
+                                            <div class="div2">
                                                 <h5>C. KLASIFIKASI PEKERJAAN</h5>
                                                 <div class="input-field col s2">
                                                     <p>Detail Pekerjaan</p>
@@ -203,7 +210,7 @@ foreach($results as $result)
                                                      </p>
                                                 </div>
                                             </div>
-                                            <div >
+                                            <div class="div2">
                                                 <h5>D. PROSEDUR PEKERJAAN YANG TELAH DIJELASKAN KEPADA PEKERJA</h5>
                                                 <div class="input-field col s2">
                                                     <p>Detail Pekerjaan</p>
@@ -217,7 +224,7 @@ foreach($results as $result)
                                                      </p>
                                                 </div>
                                             </div>
-                                            <div >
+                                            <div class="div2">
                                                 <h5>E. Lampiran Izin Kerja</h5>
                                                 <div class="input-field col s5">
                                                     <p>Identifikasi Bahaya, Penilaian dan Pengendalian Resiko</p>
@@ -277,7 +284,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?> 
-                                            <div>
+                                            <div class="div2">
                                                 <h5>A. INFORMASI PEKERJAAN</h5>
                                                 <div class="input-field col s3">
                                                     <p>1. Tanggal</p>
@@ -323,7 +330,7 @@ foreach($results as $result)
                                                 </div>
                                             
                                             </div>
-                                            <div>
+                                            <div class="div2">
                                                 <h5>B. Peralatan Keselamatan</h5>
                                                 
                                                 <div class="input-field col s3">
@@ -354,7 +361,7 @@ foreach($results as $result)
                                                 </div>
                                             
                                             </div>
-                                            <div>
+                                            <div class="div2">
                                                 <h5>C. Analisis Keselamatan Kerja</h5>
                                                 
                                                 <div class="input-field col s3">
@@ -402,7 +409,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $result)
 {               ?> 
-                                            <div>
+                                            <div class="div2">
                                                 
                                                 <div class="input-field col s3">
                                                     <p>Nama Unit</p>
@@ -458,8 +465,9 @@ foreach($results as $result)
                                                 <div class="input-field col s9">
                                                     <p>: <?php echo htmlentities($result->PotentialHazard);?></p>
                                                 </div>
+                                                <hr>
                                                 <div class="input-field col s3">
-                                                    <p>Resiko</p>
+                                                    <p>Kemungkinan</p>
                                                 </div>
                                                 <div class="input-field col s9">
                                                     <p>: <?php echo htmlentities($result->onsequence);?></p>
@@ -468,14 +476,46 @@ foreach($results as $result)
                                                     <p>Konsekuensi</p>
                                                 </div>
                                                 <div class="input-field col s9">
+                                                    <p>: <?php echo htmlentities($result->Consequences);?></p>
+                                                </div>
+                                                <div class="input-field col s3">
+                                                    <p>Resiko</p>
+                                                </div>
+                                                <div class="input-field col s9">
                                                     <p>: <?php echo htmlentities($result->Possibility);?></p>
                                                 </div>
                                                 <div class="input-field col s3">
                                                     <p>Tingkat Resiko</p>
                                                 </div>
                                                 <div class="input-field col s9">
-                                                    <p>: <?php echo htmlentities($result->LevelOfRisk);?></p>
+                                                    <p>: <?php echo htmlentities($result->LevelOfRisk2);?></p>
                                                 </div>
+                                                <hr>
+                                                <div class="input-field col s3">
+                                                    <p>Pengendalian Resiko</p>
+                                                </div>
+                                                <div class="input-field col s9">
+                                                    <p>: <?php echo htmlentities($result->RiskControl);?></p>
+                                                </div>
+                                                <div class="input-field col s3">
+                                                    <p>Konsekuensi</p>
+                                                </div>
+                                                <div class="input-field col s9">
+                                                    <p>: <?php echo htmlentities($result->Consequences2);?></p>
+                                                </div>
+                                                <div class="input-field col s3">
+                                                    <p>Kemungkinan</p>
+                                                </div>
+                                                <div class="input-field col s9">
+                                                    <p>: <?php echo htmlentities($result->Possibility2);?></p>
+                                                </div>
+                                                <div class="input-field col s3">
+                                                    <p>Tingkat Resiko</p>
+                                                </div>
+                                                <div class="input-field col s9">
+                                                    <p>: <?php echo htmlentities($result->LevelOfRisk2);?></p>
+                                                </div>
+                                                <hr>
                                                 <div class="input-field col s3">
                                                     <p>Status Pengendalian</p>
                                                 </div>

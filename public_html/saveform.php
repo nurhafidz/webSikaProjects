@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL && E_NOTICE);
+error_reporting(E_ALL );
 session_start();
 include('includes/config.php');
 if(strlen($_SESSION['emplogin'])==0)
@@ -77,8 +77,14 @@ if (isset($_POST['save'])) {
     $kegiatan=$_POST['kegiatan'];
     $potensi_bahaya=$_POST['potensi_bahaya'];
     $resiko=$_POST['resiko'];
-    $konsekuensi=$_POST['konsekuensi'];
-    $tingkat_resiko=$_POST['tingkat_resiko'];
+    $RiskControl=$_POST['RiskControl'];
+    $Consequences=$_POST['Consequences'];
+    $Consequences2=$_POST['Consequences2'];
+    $Possibility=$_POST['Possibility'];
+    $Possibility2=$_POST['Possibility2'];
+    $LevelOfRisk=$_POST['LevelOfRisk'];
+    $LevelOfRisk2=$_POST['LevelOfRisk2'];
+
     $status_pengendalian=$_POST['status_pengendalian'];
     $penanggung_jawab=$_POST['penanggung_jawab'];
     
@@ -234,29 +240,85 @@ if (isset($_POST['save'])) {
         }
 
         $sql3= $dbh->prepare(" INSERT INTO tblidentification (
-            EmployeesID,Email,UnitName,Field,TypeOfWork,DocumentNumber,Date,Revision,Page,Activity,PotentialHazard,onsequence,Possibility,LevelOfRisk,ControlStatus,PersonInCharge,Status
+            EmployeesID,
+            Email,
+            UnitName,
+            Field,
+            TypeOfWork,
+            DocumentNumber,
+            Date,
+            Revision,
+            Page,
+            Activity,
+            PotentialHazard,
+            onsequence,
+            Consequences,
+            Possibility,
+            LevelOfRisk,
+            RiskControl,
+            Consequences2,
+            Possibility2,
+            LevelOfRisk2,
+            ControlStatus,
+            PersonInCharge,
+            Status
             ) 
-            VALUES(:EmployeesID,:email,:nama_unit,:bidang,:jenis_pekerjaan,:no_dokumen,:tgl3,:revisi,:halaman,:kegiatan,:potensi_bahaya,:resiko,:konsekuensi,:tingkat_resiko,:status_pengendalian,:penanggung_jawab,:status)");
+            VALUES(
+            :EmployeesID,
+            :Email,
+            :UnitName,
+            :Field,
+            :TypeOfWork,
+            :DocumentNumber,
+            :Date,
+            :Revision,
+            :Page,
+            :Activity,
+            :PotentialHazard,
+            :onsequence,
+            :Consequences,
+            :Possibility,
+            :LevelOfRisk,
+            :RiskControl,
+            :Consequences2,
+            :Possibility2,
+            :LevelOfRisk2,
+            :ControlStatus,
+            :PersonInCharge,
+            :Status
+            )");
             
             $params3 = array(
                 ':EmployeesID'=>$id,
-                ':email'=>$email,
-                ':nama_unit'=>$nama_unit,
-                ':bidang'=>$bidang,
-                ':jenis_pekerjaan'=>$jenis_pekerjaan,
-                ':no_dokumen'=>$no_dokumen,
-                ':tgl3'=>$tgl3,
-                ':revisi'=>$revisi,
-                ':halaman'=>$halaman,
-                ':kegiatan'=>$kegiatan,
-                ':potensi_bahaya'=>$potensi_bahaya,
-                ':resiko'=>$resiko,
-                ':konsekuensi'=>$konsekuensi,
-                ':tingkat_resiko'=>$tingkat_resiko,
-                ':status_pengendalian'=>$status_pengendalian,
-                ':penanggung_jawab'=>$penanggung_jawab,
-                ':status'=>$status
+                ':Email'=>$email,
+                ':UnitName'=>$nama_unit,
+                ':Field'=>$bidang,
+                ':TypeOfWork'=>$jenis_pekerjaan,
+                ':DocumentNumber'=>$no_dokumen,
+                ':Date'=>$tgl3,
+                ':Revision'=>$revisi,
+                ':Page'=>$halaman,
+                ':Activity'=>$kegiatan,
+                ':PotentialHazard'=>$potensi_bahaya,
+                ':onsequence'=>$resiko,
+                ':Consequences'=>$Consequences,
+                ':Possibility'=>$Possibility,
+                ':LevelOfRisk'=>$LevelOfRisk,
+                ':RiskControl'=>$RiskControl,
+                ':Consequences2'=>$Consequences2,
+                ':Possibility2'=>$Possibility2,
+                ':LevelOfRisk2'=>$LevelOfRisk2,
+                ':ControlStatus'=>$status_pengendalian,
+                ':PersonInCharge'=>$penanggung_jawab,
+                ':Status'=>$status
             );
+echo "<p>1".$RiskControl."</p>";
+echo "<p>2".$Consequences."</p>";
+echo "<p>3".$Consequences2."</p>";
+echo "<p>4".$Possibility."</p>";
+echo "<p>5".$Possibility2."</p>";
+echo "<p>6".$LevelOfRisk."</p>";
+echo "<p>7".$LevelOfRisk2."</p>";
             $saved3 = $sql3->execute($params3);
             if ($saved3) {
                 echo 'berhasil3';

@@ -495,22 +495,43 @@ $eid=$_SESSION['emplogin'];
                                             <label for="mydiv109"> Potensi Bahaya</label>
                                             <input required  type="text" name="potensi_bahaya" class="custom-file-input"  id="mydiv109">
                                         </div>
+                                        <hr>
                                         <div class="input-field ">
                                             <label for="mydiv1010"> Resiko</label>
                                             <input required  type="text" name="resiko" class="custom-file-input"  id="mydiv1010">
                                         </div>
+                                        <p>Penilaian Resiko</p>
                                         <div class="input-field ">
-                                            <label for="mydiv1011"> Konsekuensi</label>
-                                            <input required  type="text" name="konsekuensi" class="custom-file-input"  id="mydiv1011">
+                                            <label for="mydiv1010"> Konsekuensi</label>
+                                            <input required  type="text" name="Consequences" class="custom-file-input"  id="mydiv1010">
                                         </div>
                                         <div class="input-field ">
-                                            <label for="mydiv1012"> Kemungkinan</label>
-                                            <input required  type="text" name="kemungkinan" class="custom-file-input"  id="mydiv1012">
+                                            <label for="mydiv1010"> Kemungkinan</label>
+                                            <input required  type="text" name="Possibility" class="custom-file-input"  id="mydiv1010">
+                                        </div>
+                                        <div class="input-field ">
+                                            <label for="mydiv1010"> Tingkat Resiko</label>
+                                            <input required  type="text" name="LevelOfRisk" class="custom-file-input"  id="mydiv1010">
+                                        </div>
+                                        <hr>
+                                        <p>Pengendalian Resiko</p>
+                                        <div class="input-field ">
+                                            <label for="mydiv1011"> Pengendalian Resiko</label>
+                                            <input required  type="text" name="RiskControl" class="custom-file-input"  id="mydiv1011">
+                                        </div>
+                                        <div class="input-field ">
+                                            <label for="mydiv1011"> Kemungkinan</label>
+                                            <input required  type="text" name="Consequences2" class="custom-file-input"  id="mydiv1011">
+                                        </div>
+                                        <div class="input-field ">
+                                            <label for="mydiv1011"> Kemungkinan</label>
+                                            <input required  type="text" name="Possibility2" class="custom-file-input"  id="mydiv1011">
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1013"> Tingkat Resiko</label>
-                                            <input required  type="text" name="tingkat_resiko" class="custom-file-input"  id="mydiv1013">
+                                            <input required  type="text" name="LevelOfRisk2" class="custom-file-input"  id="mydiv1013">
                                         </div>
+                                        <hr>
                                         <div class="input-field ">
                                             <label for="mydiv1014"> Status Pengendalian</label>
                                             <input required  type="text" name="status_pengendalian" class="custom-file-input"  id="mydiv1014">

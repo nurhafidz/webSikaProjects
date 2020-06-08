@@ -18,12 +18,13 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- CSS only -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-<!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C   +OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft   +2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <style type="text/css">
 /* Kode CSS Untuk PAGE ini dibuat oleh http://jsfiddle.net/2wk6Q/1/ */
     p{
@@ -48,6 +49,8 @@ else{
     }
     table{
         padding:0%;
+    }
+    .button5 {border-radius: 50%;
     }
     * {
         box-sizing: border-box;
@@ -97,6 +100,18 @@ else{
 </style>
 </head>
 <body>
+<div class="sticky-top" id="bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="btn btn-light" href="formwp.php" type="button" >
+        <i class="material-icons p-1" title="Accept">keyboard_backspace</i></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        </div>
+        <div class="form-inline ">
+            <a class="text-right btn btn-light " type="button" onClick="action();">
+            <i class="material-icons p-1" title="Accept">print</i></a>
+        </div>
+    </nav>
+</div>
 <div class="book">
     <div class="page">
         <p class="text-right mr-5">No Dok :</p>
@@ -220,13 +235,13 @@ else{
                                 <p >Jam Mulai</p>
                                 </div>
                                 <div class="col-sm-3">
-                                <p>: <?php echo htmlentities            ($result->StartDate);?></p>
+                                <p>: <?php echo htmlentities($result->StartDate);?></p>
                                 </div>
                                 <div class="col-sm-3">
                                 <p >Jam Mulai</p>
                                 </div>
                                 <div class="col-sm-3">
-                                <p>: <?php echo htmlentities    ($result->StartTime);?></p>
+                                <p>: <?php echo htmlentities($result->StartTime);?></p>
                                 </div>
                             </div>
                         </div>
@@ -700,8 +715,8 @@ else{
                             <td rowspan="2">Resiko</td>
                             <td colspan="3">Penilaian Resiko</td>
                             <td rowspan="2">Pengendalian Resiko</td>
-                            <td colspan="3">Penilaian Resiko</td>
-                            <td rowspan="2" >Status Pengendalian</td>
+                            <td colspan="3">Pengendalian Resiko</td>
+                            <td rowspan="2">Status Pengendalian</td>
                             <td rowspan="2">Penanggung Jawab</td>
                         </tr>
                         <tr>
@@ -717,20 +732,26 @@ else{
                         $a = explode(",",$result->Activity  );
                         $b = explode(",",$result->PotentialHazard);
                         $c = explode(",",$result->onsequence);
-                        $d = explode(",",$result->LevelOfRisk);
+                        $d = explode(",",$result->LevelOfRisk2);
                         $e = explode(",",$result->ControlStatus);
                         $f = explode(",",$result->PersonInCharge);
-                        for ( $i = 0; $i < count( $number ); $i++ ) {
+                        $g = explode(",",$result->Possibility2);
+                        $h = explode(",",$result->Consequences);
+                        $j = explode(",",$result->Possibility);
+                        $k = explode(",",$result->LevelOfRisk);
+                        $l = explode(",",$result->RiskControl);
+                        $m = explode(",",$result->Consequences2);
+                        for ( $i = 0; $i < count( $a ); $i++ ) {
                         ;echo"<tr>
                         <td>".$a[$i]."</td>
                         <td>".$b[$i]."</td>
                         <td>".$c[$i]."</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>".$h[$i]."</td>
+                        <td>".$j[$i]."</td>
+                        <td>".$k[$i]."</td>
+                        <td>".$l[$i]."</td>
+                        <td>".$m[$i]."</td>
+                        <td>".$g[$i]."</td>
                         <td>".$d[$i]."</td>
                         <td>".$e[$i]."</td>
                         <td>".$f[$i]."</td>
@@ -778,5 +799,15 @@ else{
     </div>
     <?php }} ?>
 </div>
+    <script>
+        var hidden = false;
+    function action() {
+        document.getElementById('bar').style.visibility = 'hidden';
+        window.print();
+        document.getElementById('bar').style.visibility = 'visible';
+        
+
+    }
+</script>
 </body>
 </html>

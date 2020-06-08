@@ -215,15 +215,15 @@ var mydiv94= document.getElementById("mydiv94");
 var f = document.getElementById("myDIV11");
 var h = document.getElementById("myDIV12");
 if(mydiv92!=""&& mydiv93!=""&& mydiv94!=""){
-    if (f.style.display === "block") {
-        f.style.display = "none";
-        h.style.display = "block";
-        return false;
-        
-    } else {
-        f.style.display = "block";
-        h.style.display = "none";
-    }}
+        if (f.style.display === "block") {
+            f.style.display = "none";
+            h.style.display = "block";
+            return false;
+            
+        } else {
+            f.style.display = "block";
+            h.style.display = "none";
+        }}
     else{
         alert('Isi Data Dengan Lengkap');
     }
