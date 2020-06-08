@@ -312,13 +312,6 @@ if (isset($_POST['save'])) {
                 ':PersonInCharge'=>$penanggung_jawab,
                 ':Status'=>$status
             );
-echo "<p>1".$RiskControl."</p>";
-echo "<p>2".$Consequences."</p>";
-echo "<p>3".$Consequences2."</p>";
-echo "<p>4".$Possibility."</p>";
-echo "<p>5".$Possibility2."</p>";
-echo "<p>6".$LevelOfRisk."</p>";
-echo "<p>7".$LevelOfRisk2."</p>";
             $saved3 = $sql3->execute($params3);
             if ($saved3) {
                 echo 'berhasil3';
