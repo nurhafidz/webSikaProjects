@@ -175,17 +175,13 @@ if (isset($_POST['save'])) {
         ':WorkProceduresImage'=> $img_prosedur_kerja,
         ':CertificateOfCompetenceImage'=> $img_pekerja,
         ':status'=>$status
-    );
-
+    );  
         move_uploaded_file($_FILES['img_resiko']['tmp_name'], $loc_img_resiko.$img_resiko);
         move_uploaded_file($_FILES['img_analysis']['tmp_name'], $loc_img_analysis.$img_analysis);
         move_uploaded_file($_FILES['img_prosedur_kerja']['tmp_name'], $loc_img_prosedur_kerja.$img_prosedur_kerja);
         move_uploaded_file($_FILES['img_pekerja']['tmp_name'], $loc_img_pekerja.$img_pekerja);
 
-        $saved = $stmt->execute($params);
-        if ($saved) {
-            echo 'berhasil 1';
-        }
+        
         $sql2 = "INSERT INTO tblworksafetyanalysis (EmployeesID,
         Email,
         Date,
@@ -234,10 +230,7 @@ if (isset($_POST['save'])) {
         ':ControlMeasures'=>$tindakan_pengendalian,
         ':Status'=>$status
         );
-        $saved2 = $stmt2->execute($params2);
-        if ($saved2) {
-            echo 'berhasil2';
-        }
+        
 
         $sql3= $dbh->prepare(" INSERT INTO tblidentification (
             EmployeesID,
@@ -312,11 +305,22 @@ if (isset($_POST['save'])) {
                 ':PersonInCharge'=>$penanggung_jawab,
                 ':Status'=>$status
             );
-            $saved3 = $sql3->execute($params3);
-            if ($saved3) {
-                echo 'berhasil3';
-                header('location:statuswp.php');
+            $saved = $stmt->execute($params);
+            
+            if ($saved) {
+                echo 'berhasil 1';
+                $saved2 = $stmt2->execute($params2);
+                if ($saved2) {
+                    echo 'berhasil2';
+                    $saved3 = $sql3->execute($params3);
+                    if ($saved3) {
+                        echo 'berhasil3';
+                        header ('Location:statuswp.php');
+                    }
+                }
             }
+            
+            
         }
     }
     }

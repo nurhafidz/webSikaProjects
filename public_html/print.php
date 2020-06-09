@@ -306,7 +306,15 @@ else{
                         <p>&nbsp  Identifikasi Bahaya, Penilaian dan Pengendalian Resiko</p>
                     </div>
                     <div class="col-sm-4">
-                        <p>: <?php echo " <a href='../images/imgresiko/$result->HazardIdentificationImage' download='imgresiko'>download</a>";?></p>
+                        
+                        <?php
+                        $img=$result->HazardIdentificationImage;
+                        if ($img !=""){
+                            ?>
+                            <i class="material-icons p-1" title="Accept">done</i>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -316,7 +324,14 @@ else{
                         <p>&nbsp  Job Safety Analysis</p>
                     </div>
                     <div class="col-sm-4">
-                    <p>: <?php echo " <a href='../images/imganalysis/$result->JobSafetyImage' download='imganalysis'> download </a>";?></p>
+                    <?php
+                        $img=$result->JobSafetyImage;
+                        if ($img !=""){
+                            ?>
+                            <i class="material-icons p-1" title="Accept">done</i>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -326,7 +341,14 @@ else{
                         <p>&nbsp  Prosedur Kerja</p>
                     </div>
                     <div class="col-sm-4">
-                        <p>: <?php echo " <a href='../images/imgprosedurkerja/$result->WorkProceduresImage' download='Prosedur'> download </a>";?></p>
+                        <?php
+                        $img=$result->WorkProceduresImage;
+                        if ($img !=""){
+                            ?>
+                            <i class="material-icons p-1" title="Accept">done</i>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -336,7 +358,14 @@ else{
                         <p>&nbsp  Sertifikat Kompetensi Pekerja</p>
                     </div>
                     <div class="col-sm-4">
-                        <p>: <?php echo " <a href='../images/imgpekerja/$result->CertificateOfCompetenceImage' download='sertifikat'> download </a>";?></p>
+                        <?php
+                        $img=$result->CertificateOfCompetenceImage;
+                        if ($img !=""){
+                            ?>
+                            <i class="material-icons p-1" title="Accept">done</i>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -521,7 +550,7 @@ else{
                                 $Pecah = explode(",",$result->PersonalProtectiveEquipment  );
                                 for ( $i = 0; $i < count( $Pecah ); $i+=3 ) {
                                 echo $Pecah[$i];
-                                  ;echo"<br />&nbsp&nbsp";}?>
+                                  ;echo",<br />&nbsp&nbsp";}?>
                                  </p>
                             </div>
                             <div class="col-sm-4">
@@ -530,7 +559,7 @@ else{
                                 $Pecah = explode(",",$result->PersonalProtectiveEquipment  );
                                 for ( $i = 1; $i < count( $Pecah ); $i+=3 ) {
                                 echo $Pecah[$i];
-                                  ;echo"<br />&nbsp&nbsp";}?>
+                                  ;echo",<br />&nbsp&nbsp";}?>
                                  </p>
                             </div>
                             <div class="col-sm-4">
@@ -539,7 +568,7 @@ else{
                                 $Pecah = explode(",",$result->PersonalProtectiveEquipment  );
                                 for ( $i = 2; $i < count( $Pecah ); $i+=3 ) {
                                 echo $Pecah[$i];
-                                  ;echo"<br />&nbsp&nbsp";}?>
+                                  ;echo",<br />&nbsp&nbsp";}?>
                                  </p>
                             </div>
                         </div>
@@ -560,7 +589,7 @@ else{
                                 <p>
                                 <?php
                                 $Pecah = explode(",",$result->SafetyEmergencyEquipment  );
-                                for ( $i = 0; $i < count( $Pecah ); $i+=3 ) {
+                                for ( $i = 0; $i < count( $Pecah ); $i+=2 ) {
                                 echo $Pecah[$i];
                                   ;echo"<br />&nbsp&nbsp";}?>
                                  </p>
@@ -569,7 +598,7 @@ else{
                                 <p>
                                 <?php
                                 $Pecah = explode(",",$result->SafetyEmergencyEquipment  );
-                                for ( $i = 1; $i < count( $Pecah ); $i+=3 ) {
+                                for ( $i = 1; $i < count( $Pecah ); $i+=2 ) {
                                 echo $Pecah[$i];
                                   ;echo"<br />&nbsp&nbsp";}?>
                                  </p>

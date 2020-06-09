@@ -560,7 +560,7 @@ else{
                                 <p>
                                 <?php
                                 $Pecah = explode(",",$result->SafetyEmergencyEquipment  );
-                                for ( $i = 0; $i < count( $Pecah ); $i+=3 ) {
+                                for ( $i = 0; $i < count( $Pecah ); $i+=2 ) {
                                 echo $Pecah[$i];
                                   ;echo"<br />&nbsp&nbsp";}?>
                                  </p>
@@ -569,7 +569,7 @@ else{
                                 <p>
                                 <?php
                                 $Pecah = explode(",",$result->SafetyEmergencyEquipment  );
-                                for ( $i = 1; $i < count( $Pecah ); $i+=3 ) {
+                                for ( $i = 1; $i < count( $Pecah ); $i+=2 ) {
                                 echo $Pecah[$i];
                                   ;echo"<br />&nbsp&nbsp";}?>
                                  </p>

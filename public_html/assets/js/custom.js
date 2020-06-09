@@ -110,6 +110,8 @@ if (mydiv21 !=""&&mydiv22 !=""&&mydiv23 !=""&&mydiv24 !=""){
     }
     }
 function myform5() {
+var ckin =  document.getElementById('ckin').value;
+var inck =  document.getElementById('inck').value;
 var a = document.getElementById("myDIV5");
 var b = document.getElementById("myDIV6");
     if (a.style.display === "block") {
@@ -209,9 +211,9 @@ var g = document.getElementById("myDIV11");
     }
     }
 function myform11() {
-var mydiv92= document.getElementById("mydiv92"); 
-var mydiv93= document.getElementById("mydiv93"); 
-var mydiv94= document.getElementById("mydiv94"); 
+var mydiv92= document.getElementById("mydiv92").value; 
+var mydiv93= document.getElementById("mydiv93").value; 
+var mydiv94= document.getElementById("mydiv94").value; 
 var f = document.getElementById("myDIV11");
 var h = document.getElementById("myDIV12");
 if(mydiv92!=""&& mydiv93!=""&& mydiv94!=""){
@@ -229,20 +231,20 @@ if(mydiv92!=""&& mydiv93!=""&& mydiv94!=""){
     }
     }
 function myform12() {
-var mydiv101 = document.getElementById("mydiv101");
-var mydiv102 = document.getElementById("mydiv102");
-var mydiv103 = document.getElementById("mydiv103");
-var mydiv104 = document.getElementById("mydiv104");
-var mydiv106 = document.getElementById("mydiv106");
-var mydiv107 = document.getElementById("mydiv107");
-var mydiv108 = document.getElementById("mydiv108");
-var mydiv109 = document.getElementById("mydiv109");
-var mydiv1010 = document.getElementById("mydiv1010");
-var mydiv1011 = document.getElementById("mydiv1011");
-var mydiv1012 = document.getElementById("mydiv1012");
-var mydiv1013 = document.getElementById("mydiv1013");
-var mydiv1014 = document.getElementById("mydiv1014");
-var mydiv1015 = document.getElementById("mydiv1015");
+var mydiv101 = document.getElementById("mydiv101").value;
+var mydiv102 = document.getElementById("mydiv102").value;
+var mydiv103 = document.getElementById("mydiv103").value;
+var mydiv104 = document.getElementById("mydiv104").value;
+var mydiv106 = document.getElementById("mydiv106").value;
+var mydiv107 = document.getElementById("mydiv107").value;
+var mydiv108 = document.getElementById("mydiv108").value;
+var mydiv109 = document.getElementById("mydiv109").value;
+var mydiv1010 = document.getElementById("mydiv1010").value;
+var mydiv1011 = document.getElementById("mydiv1011").value;
+var mydiv1012 = document.getElementById("mydiv1012").value;
+var mydiv1013 = document.getElementById("mydiv1013").value;
+var mydiv1014 = document.getElementById("mydiv1014").value;
+var mydiv1015 = document.getElementById("mydiv1015").value;
 var g = document.getElementById("myDIV12")
 if (mydiv101 !="" &&    mydiv102 !="" && mydiv103 !="" && mydiv104 !="" && mydiv106 !="" && mydiv107 !="" && mydiv108 !="" && mydiv109 !="" && mydiv1010 !="" && mydiv1011 !="" && mydiv1012 !="" && mydiv1013 !="" && mydiv1014 !="" && mydiv1015 !=""  ) {
     
@@ -257,4 +259,36 @@ if (mydiv101 !="" &&    mydiv102 !="" && mydiv103 !="" && mydiv104 !="" && mydiv
         return false;
     }
     }
-        
+
+function validatein() {
+    var y=document.getElementById("ckin");
+    var x=document.getElementById("inck");
+    if (x.disabled == false){
+     x.disabled = true;}
+    else{
+    x.disabled = false;}
+}
+function validatein2() {
+    var y=document.getElementById("ckin2");
+    var x=document.getElementById("inck2");
+    if (x.disabled == false){
+     x.disabled = true;}
+    else{
+    x.disabled = false;}
+}
+function validatein3() {
+    var y=document.getElementById("ckin3");
+    var x=document.getElementById("inck3");
+    if (x.disabled == false){
+     x.disabled = true;}
+    else{
+    x.disabled = false;}
+}
+function validatein4() {
+    var y=document.getElementById("ckin4");
+    var x=document.getElementById("inck4");
+    if (x.disabled == false){
+     x.disabled = true;}
+    else{
+    x.disabled = false;}
+}

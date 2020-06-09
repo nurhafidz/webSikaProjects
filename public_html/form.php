@@ -32,11 +32,15 @@ $eid=$_SESSION['emplogin'];
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
 
 <style>
+textarea {
+    border:none;
+    border-bottom: 1px solid #BCBCBC;
+    box-shadow:  #BCBCBC;
+    outline: none !important;
+}
 
 </style>
-<script>
 
-</script>
     </head>
     <body>
   <?php include('includes/header.php');?>
@@ -104,7 +108,7 @@ $eid=$_SESSION['emplogin'];
                                         <p for="">Pengawas K3</p>
                                         <div class="input-field col s6">
                                             <label for="">Nama Lengkap</label>
-                                            <input required id="mydiv17"  type="text" name="Pengawas_K3" class="validate" autocomplete="off"   >
+                                            <input required id="mydiv17"  type="text" name="Pengawas_K3" class="validate" autocomplete="off">
                                         </div>
                                         <div class="input-field col s6">
                                             <label for="">Nomor Telepon</label>
@@ -148,47 +152,55 @@ $eid=$_SESSION['emplogin'];
                                         <h5>C. Klasifikasi Pekerjaan</h5>
                                         <br>
                                         <p>Pilih klasifikasi</p>
-                                        <div class="input-field ">
+                                        <div class="input-field col s10">
                                             <input type="checkbox" id="mydiv31" name="ck1[]"  value="Pekerjaan Bertegangan Listrik">
                                             <label for="mydiv31"> Pekerjaan Bertegangan Listrik</label><br>
                                         </div>
                                         
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv32" name="ck1[]"  value="Pekerjaan Confined Spac">
                                             <label for="mydiv32"> Pekerjaan Confined Space</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv33" name="ck1[]"  value="Pekerjaan Panas">
                                             <label for="mydiv33"> Pekerjaan Panas</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv34" name="ck1[]"  value="Pekerjaan di ketinggian">
                                             <label for="mydiv34"> Pekerjaan di ketinggian</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv35" name="ck1[]"  value="Pekerjaan Penggalian">
                                             <label for="mydiv35"> Pekerjaan Penggalian</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv36" name="ck1[]"  value="Pekerjaan Penanaman Tiang">
                                             <label for="mydiv36"> Pekerjaan Penanaman Tiang</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv37" name="ck1[]"  value="Pekerjaan Perampalan Pohon (ROW)">
                                             <label for="mydiv37"> Pekerjaan Perampalan Pohon (ROW)</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv38" name="ck1[]"  value="Pekerjaan Sipil">
                                             <label for="mydiv38"> Pekerjaan Sipil </label><br>
                                         </div>
-
+                                        <div class="input-field col s2 ">
+                                            <input type="checkbox" id="ckin" onclick="validatein()">
+                                            <label for="ckin"> Lainnya : </label><br>
+                                        </div>
+                                        <div class="input-field col s10 " >
+                                            <input type="text" disabled name="ck1[]" id="inck">
+                                        </div>
                                         <br>
+                                        <div class="input-field col s12"></div>
+                                        <div class="input-field col s12"></div>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform4()">back</button>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform5()">next</button>
                                     </div>
@@ -197,51 +209,59 @@ $eid=$_SESSION['emplogin'];
                                         <h5>D. Prosedur Pekerjaan yang telah dijelaskan kepada pekerja</h5>
                                         <br>
                                         <p>Pilih Prosedur</p>
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv41" name="ck2[]" value="Pemeliharaan Fuse Cut Out">
                                             <label for="mydiv41"> Pemeliharaan Fuse Cut Out</label><br>
                                         </div>
                                         
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv42" name="ck2[]" value="Bongkar Pasang Trafo Portal">
                                             <label for="mydiv42"> Bongkar Pasang Trafo Portal</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv43" name="ck2[]" value="Pemeliharaan SUTM (Perabasan)">
                                             <label for="mydiv43"> Pemeliharaan SUTM (Perabasan)</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv44" name="ck2[]" value="Pemeliharaan SUTM (Perbaikan Kawat terburai/rantas)">
                                             <label for="mydiv44"> Pemeliharaan SUTM (Perbaikan Kawat terburai/rantas)</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv45" name="ck2[]" value="Pemeliharaan Arrester pada gardu">
                                             <label for="mydiv45"> Pemeliharaan Arrester pada gardu</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv46" name="ck2[]" value="Pemeliharaan Isolator">
                                             <label for="mydiv46"> Pemeliharaan Isolator</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv47" name="ck2[]" value="Pemeliharaan LBS dan RECLOSER">
                                             <label for="mydiv47"> Pemeliharaan LBS dan RECLOSER</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv48" name="ck2[]" value="Bongkar dan Pasang Tiang Beton">
                                             <label for="mydiv48"> Bongkar dan Pasang Tiang Beton </label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12">
                                             <input type="checkbox" id="mydiv49" name="ck2[]" value="Pemeliharaan Cubikie Gardu Bangunan">
                                             <label for="mydiv49"> Pemeliharaan Cubikie Gardu Bangunan </label><br>
                                         </div>
-
+                                        <div class="input-field col s2 ">
+                                            <input type="checkbox" id="ckin2" onclick="validatein2()">
+                                            <label for="ckin2"> Lainnya : </label><br>
+                                        </div>
+                                        <div class="input-field col s10 " >
+                                            <input type="text" disabled name="ck2[]" id="inck2">
+                                        </div>
+                                        <div class="input-field col s12"></div>
+                                        <div class="input-field col s12"></div>
                                         <br>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform5()">back</button>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform6()">next</button>
@@ -310,7 +330,7 @@ $eid=$_SESSION['emplogin'];
                                         </div>
                                         <div class="input-field">
                                             <label for="">Pelaksana Pekerjaan <br>*misal: 1. nama lengkap pelaksana lalu 2, 3, 4, dst..</label><br>
-                                            <input required id="mydiv66"  type="text" name="pelaksana_pekerjaan" autocomplete="off"  >
+                                            <textarea cols="1" required id="mydiv66"  type="text" name="pelaksana_pekerjaan" autocomplete="off"  ></textarea>
                                         </div>
                                         
                                         <br>
@@ -377,9 +397,12 @@ $eid=$_SESSION['emplogin'];
                                             <label for="mydiv711"> Full-Body Harness </label><br>
                                         </div>
 
-                                        <div class="input-field ">
-                                            <input type="checkbox" id="mydiv712" name="ck3[]" value="Yang lain:">
-                                            <label for="mydiv712"> Yang lain: </label><br>
+                                        <div class="input-field col s2 ">
+                                            <input type="checkbox" id="ckin3" onclick="validatein3()">
+                                            <label for="ckin3"> Lainnya : </label><br>
+                                        </div>
+                                        <div class="input-field col s10 " >
+                                            <input type="text" disabled name="ck3[]" id="inck3">
                                         </div>
                                         <br>
                                         <br>
@@ -400,13 +423,16 @@ $eid=$_SESSION['emplogin'];
                                             <input type="checkbox" id="mydiv84" name="ck4[]" value="Radio Telekomunikasi">
                                             <label for="mydiv84"> Radio Telekomunikasi</label><br>
                                         </div>
-                                        <div class="input-field ">
-                                            <input type="checkbox" id="mydiv85" name="ck4[]" value="Yang lain:">
-                                            <label for="mydiv85"> Yang lain:</label><br>
+                                        <div class="input-field col s2 ">
+                                            <input type="checkbox" id="ckin4" onclick="validatein4()">
+                                            <label for="ckin4"> Lainnya : </label><br>
+                                        </div>
+                                        <div class="input-field col s10 " >
+                                            <input type="text" disabled name="ck4[]" id="inck4">
                                         </div>
                                         
-                                        <br>
-                                        <br>
+                                        <div class="input-field col s12"></div>
+                                        <div class="input-field col s12"></div>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform9()">back</button>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform10()">next</button>
                                     </div>
@@ -426,15 +452,15 @@ $eid=$_SESSION['emplogin'];
                                         <br>
                                         <div class="input-field ">
                                             <label for="mydiv92"> Uraikan Langkah Pekerjaan</label>
-                                            <input required  type="text" name="langkah_pekerjaan"  id="mydiv92">
+                                            <textarea cols="1" required class="custom-file-input" type="text" name="langkah_pekerjaan"  id="mydiv92"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv93"> Uraikan Potensi Bahaya dan Resiko</label>
-                                            <input required  type="text" name="potensi_bahaya_dan_resiko"  id="mydiv93">
+                                            <textarea cols="1" required  type="text" name="potensi_bahaya_dan_resiko"  id="mydiv93"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv94"> Uraikan Tindakan Pengendalian</label>
-                                            <input required  type="text"  name="tindakan_pengendalian"  id="mydiv94">
+                                            <textarea cols="1" required  type="text"  name="tindakan_pengendalian"  id="mydiv94"></textarea>
                                         </div>
                                         <br>
                                         <button class="waves-effect waves-light btn orange dark-1" onclick="myform10()">back</button>
@@ -489,47 +515,47 @@ $eid=$_SESSION['emplogin'];
 
                                         <div class="input-field ">
                                             <label for="mydiv108"> Kegiatan</label>
-                                            <input required  type="text" name="kegiatan" class="custom-file-input"  id="mydiv108">
+                                            <textarea cols="1" required  type="text" name="kegiatan" class="custom-file-input"  id="mydiv108"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv109"> Potensi Bahaya</label>
-                                            <input required  type="text" name="potensi_bahaya" class="custom-file-input"  id="mydiv109">
+                                            <textarea cols="1" required  type="text" name="potensi_bahaya" class="custom-file-input"  id="mydiv109"></textarea>
                                         </div>
                                         <hr>
                                         <div class="input-field ">
                                             <label for="mydiv1010"> Resiko</label>
-                                            <input required  type="text" name="resiko" class="custom-file-input"  id="mydiv1010">
+                                            <textarea cols="1" required  type="text" name="resiko" class="custom-file-input"  id="mydiv1010"></textarea>
                                         </div>
                                         <p>Penilaian Resiko</p>
                                         <div class="input-field ">
                                             <label for="mydiv1010"> Konsekuensi</label>
-                                            <input required  type="text" name="Consequences" class="custom-file-input"  id="mydiv1010">
+                                            <textarea cols="1" required  type="text" name="Consequences" class="custom-file-input"  id="mydiv1010"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1010"> Kemungkinan</label>
-                                            <input required  type="text" name="Possibility" class="custom-file-input"  id="mydiv1010">
+                                            <textarea cols="1" required  type="text" name="Possibility" class="custom-file-input"  id="mydiv1010"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1010"> Tingkat Resiko</label>
-                                            <input required  type="text" name="LevelOfRisk" class="custom-file-input"  id="mydiv1010">
+                                            <textarea cols="1" required  type="text" name="LevelOfRisk" class="custom-file-input"  id="mydiv1010"></textarea>
                                         </div>
                                         <hr>
                                         <p>Pengendalian Resiko</p>
                                         <div class="input-field ">
                                             <label for="mydiv1011"> Pengendalian Resiko</label>
-                                            <input required  type="text" name="RiskControl" class="custom-file-input"  id="mydiv1011">
+                                            <textarea cols="1" required  type="text" name="RiskControl" class="custom-file-input"  id="mydiv1011"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1011"> Kemungkinan</label>
-                                            <input required  type="text" name="Consequences2" class="custom-file-input"  id="mydiv1011">
+                                            <textarea cols="1" required  type="text" name="Consequences2" class="custom-file-input"  id="mydiv1011"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1011"> Kemungkinan</label>
-                                            <input required  type="text" name="Possibility2" class="custom-file-input"  id="mydiv1011">
+                                            <textarea cols="1" required  type="text" name="Possibility2" class="custom-file-input"  id="mydiv1011"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1013"> Tingkat Resiko</label>
-                                            <input required  type="text" name="LevelOfRisk2" class="custom-file-input"  id="mydiv1013">
+                                            <textarea cols="1" required  type="text" name="LevelOfRisk2" class="custom-file-input"  id="mydiv1013"></textarea>
                                         </div>
                                         <hr>
                                         <div class="input-field ">
