@@ -52,7 +52,7 @@ foreach($results as $result)
                   <li class="no-padding">
                     <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Sign Out</a>
                     </li>
-                <li class="no-padding orange darken-2">
+                <li class="no-padding blue-grey darken-2">
                                
                 <a class="waves-effect waves-grey" " href="form.php">isi Formulir WP Aproval</a>
                      </li> 

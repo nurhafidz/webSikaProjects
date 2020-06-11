@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL );
+error_reporting(E_ALL);
 session_start();
 include('includes/config.php');
 if(strlen($_SESSION['emplogin'])==0)
@@ -58,14 +58,14 @@ if (isset($_POST['save'])) {
     $lokasi_pekerjaan2=$_POST['lokasi_pekerjaan2'];
     $perusahaan_pelaksana=$_POST['perusahaan_pelaksana'];
     $pengawas_pekerjaan=$_POST['pengawas_pekerjaan'];
-    $pelaksana_pekerjaan=$_POST['pelaksana_pekerjaan'];
+    $pelaksana_pekerjaan=implode(",", $_POST['pelaksana_pekerjaan']);
     //f7
     $ck3=implode(",", $_POST['ck3']);
     $ck4=implode(",", $_POST['ck4']);
     //f9
-    $langkah_pekerjaan=$_POST['langkah_pekerjaan'];
-    $potensi_bahaya_dan_resiko=$_POST['potensi_bahaya_dan_resiko'];
-    $tindakan_pengendalian=$_POST['tindakan_pengendalian'];
+    $langkah_pekerjaan=implode(",", $_POST['langkah_pekerjaan']);
+    $potensi_bahaya_dan_resiko=implode(",", $_POST['potensi_bahaya_dan_resiko']);
+    $tindakan_pengendalian=implode(",", $_POST['tindakan_pengendalian']);
     //f10
     $nama_unit=$_POST['nama_unit'];
     $bidang=$_POST['bidang'];
@@ -306,20 +306,17 @@ if (isset($_POST['save'])) {
                 ':Status'=>$status
             );
             $saved = $stmt->execute($params);
-            
             if ($saved) {
-                echo 'berhasil 1';
-                $saved2 = $stmt2->execute($params2);
-                if ($saved2) {
-                    echo 'berhasil2';
-                    $saved3 = $sql3->execute($params3);
-                    if ($saved3) {
-                        echo 'berhasil3';
-                        header ('Location:statuswp.php');
-                    }
-                }
-            }
+                echo 'berhasil 1';}
+            $saved2 = $stmt2->execute($params2);
+            if ($saved2) {
+                    echo 'berhasil2';}
             
+            $saved3 = $sql3->execute($params3);
+             if ($saved3) {
+                echo 'berhasil3';
+                header ('Location:statuswp.php');
+            }
             
         }
     }

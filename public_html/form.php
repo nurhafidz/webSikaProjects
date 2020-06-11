@@ -32,6 +32,21 @@ $eid=$_SESSION['emplogin'];
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
 
 <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 textarea {
     border:none;
     border-bottom: 1px solid #BCBCBC;
@@ -41,6 +56,41 @@ textarea {
 
 </style>
 
+<script>
+function addinput() {
+    var parent = document.getElementById("addinput");
+    var y = document.createElement("LABEL");
+    var x = document.createElement("INPUT");
+    var t = document.createTextNode("Pelaksana Pekerjaan");
+    y.setAttribute("for", "idpk");
+    x.setAttribute("type", "text");
+    x.setAttribute("id", "idpk");
+    x.setAttribute("name", "pelaksana_pekerjaan[]");
+    y.appendChild(t);
+    parent.appendChild(y);
+    parent.appendChild(x);
+}
+function addcolumn(){
+    var table = document.getElementById("table");
+    var x = document.createElement("INPUT");
+    var y = document.createElement("INPUT");
+    var z = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("name", "langkah_pekerjaan[]");
+    y.setAttribute("type", "text");
+    y.setAttribute("name", "potensi_bahaya_dan_resiko[]");
+    z.setAttribute("type", "text");
+    z.setAttribute("name", "tindakan_pengendalian[]");
+    var row = table.insertRow(2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.appendChild(x);
+    cell2.appendChild(y);
+    cell3.appendChild(z);
+}
+
+</script>
     </head>
     <body>
   <?php include('includes/header.php');?>
@@ -65,7 +115,7 @@ textarea {
                                         <label for="email">Email</label>
                                         <input required id="email" type="text" name="email" class="validate" autocomplete="off" >
                                     </div>
-                                    <button class="waves-effect waves-light btn orange dark-1" onclick="myform()">next</button>
+                                    <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform()">next</button>
                                     </div>
 
                                     <div id="myDIV2" style="display: none;" >
@@ -73,8 +123,8 @@ textarea {
                                     <br>
                                     <p>Harap siapkan 4 dokumen : Prosedur bekerja, Job safety analysis, Sertifikat Kompetensi Bekerja, dan Identifikasi Bahaya, Penilaian dan Pengendalian Resiko untuk di-upload ke bagian akhir di form berikut ini (klik Berikutnya)</p>
                                     <br>
-                                    <button class="waves-effect waves-light btn orange dark-1" onclick="myform()">back</button>
-                                    <button class="waves-effect waves-light btn orange dark-1" onclick="myform2()">next</button>
+                                    <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform()">back</button>
+                                    <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform2()">next</button>
                                     </div>
 
                                     <div id="myDIV3" style="display: none;" >
@@ -114,8 +164,8 @@ textarea {
                                             <label for="">Nomor Telepon</label>
                                             <input required id="mydiv18"  type="text" name="telp2" class="validate" autocomplete="off"   >
                                         </div>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform2()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform3()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform2()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform3()">next</button>
                                     </div>
 
                                     <div id="myDIV4" style="display: none;" >
@@ -144,8 +194,8 @@ textarea {
                                             <input required  id="mydiv24"  type="time" name="Jam_selesai" class="validate" autocomplete="off"  >
                                         </div>
                                         
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform3()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform4()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform3()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform4()">next</button>
                                     </div>
 
                                     <div id="myDIV5" style="display: none;" >
@@ -201,8 +251,8 @@ textarea {
                                         <br>
                                         <div class="input-field col s12"></div>
                                         <div class="input-field col s12"></div>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform4()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform5()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform4()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform5()">next</button>
                                     </div>
 
                                     <div id="myDIV6" style="display: none;" >
@@ -263,8 +313,8 @@ textarea {
                                         <div class="input-field col s12"></div>
                                         <div class="input-field col s12"></div>
                                         <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform5()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform6()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform5()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform6()">next</button>
                                     </div>
 
                                     <div id="myDIV7" style="display: none;" >
@@ -272,27 +322,27 @@ textarea {
                                         <br>
                                         <div class="input-field ">
                                             <p for="mydiv51"> Identifikasi Bahaya, Penilaian dan Pengendalian Resiko </p><br>
-                                            <input required  id="mydiv51" name="img_resiko" type="file" class="custom-file-input waves-effect waves-light btn orange dark-1" >
+                                            <input required  id="mydiv51" name="img_resiko" type="file" class="custom-file-input waves-effect waves-light btn blue-grey dark-1" >
                                         </div>
                                         
                                         <div class="input-field ">
                                             <p for="mydiv52"> Job Safety Analysis</p><br>
-                                            <input required  id="mydiv52" name="img_analysis" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" >
+                                            <input required  id="mydiv52" name="img_analysis" type="file"  class="custom-file-input waves-effect waves-light btn blue-grey dark-1" >
                                         </div>
 
                                         <div class="input-field ">
                                             <p for="mydiv53"> Prosedur Kerja</p><br>
-                                            <input required  id="mydiv53" name="img_prosedur_kerja" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" >
+                                            <input required  id="mydiv53" name="img_prosedur_kerja" type="file"  class="custom-file-input waves-effect waves-light btn blue-grey dark-1" >
                                         </div>
 
                                         <div class="input-field ">
                                             <p for="mydiv54"> Sertifikat Kompetensi Pekerja</p><br>
-                                            <input required  id="mydiv54" name="img_pekerja" type="file"  class="custom-file-input waves-effect waves-light btn orange dark-1" >
+                                            <input required  id="mydiv54" name="img_pekerja" type="file"  class="custom-file-input waves-effect waves-light btn blue-grey dark-1" >
                                         </div>
                                         
                                         <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform6()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform7()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform6()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform7()">next</button>
                                         
                                     </div>
                                     <div id="myDIV8"  style="display: none;">
@@ -301,8 +351,8 @@ textarea {
                                         <p>Harap siapkan 4 dokumen : Prosedur bekerja, Job safety analysis, Sertifikat Kompetensi Bekerja, dan Identifikasi Bahaya, Penilaian dan Pengendalian Resiko untuk di-upload ke bagian akhir di form berikut ini (klik Berikutnya)</p>
                                         
                                         <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform7()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform8()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform7()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform8()">next</button>
                                     </div>
 
                                     <div id="myDIV9" style="display: none;" >
@@ -329,70 +379,75 @@ textarea {
                                             <input required id="mydiv65"  type="text" name="pengawas_pekerjaan" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
-                                            <label for="">Pelaksana Pekerjaan <br>*misal: 1. nama lengkap pelaksana lalu 2, 3, 4, dst..</label><br>
-                                            <textarea cols="1" required id="mydiv66"  type="text" name="pelaksana_pekerjaan" autocomplete="off"  ></textarea>
+                                            <label for="">Pelaksana Pekerjaan </label><br>
+                                            <input type="text" cols="1" required id="mydiv66"  type="text" name="pelaksana_pekerjaan[]" autocomplete="off"  >
+                                            
                                         </div>
-                                        
+                                        <div class="input-field" id="addinput">
+                                            
+                                        </div>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="addinput()">Tambah Pelaksana</button>
                                         <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform8()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform9()">next</button>
+                                        <br>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform8()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform9()">next</button>
                                     </div>
 
                                     <div id="myDIV10" style="display: none;" >
                                         <h5>B. Peralatan Keselamatan</h5>
                                         <br>
                                         <p>Alat Pelindung diri</p>
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv71"  name="ck3[]" value="Helm">
                                             <label for="mydiv71"> Helm</label><br>
                                         </div>
                                         
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv72"  name="ck3[]" value="Sepatu Keselamatan">
                                             <label for="mydiv72"> Sepatu Keselamatan</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv73"  name="ck3[]" value="Kacamata">
                                             <label for="mydiv73"> Kacamata</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv74"  name="ck3[]" value="Earplug">
                                             <label for="mydiv74"> Earplug</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv75"  name="ck3[]" value="Earmuff">
                                             <label for="mydiv75"> Earmuff</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv76"  name="ck3[]" value="Sarung tangan katun">
                                             <label for="mydiv76"> Sarung tangan katun</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv77"  name="ck3[]" value="Sarung tangan karet">
                                             <label for="mydiv77"> Sarung tangan karet</label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv78"  name="ck3[]" value="Sarung tangan 20kV">
                                             <label for="mydiv78"> Sarung tangan 20kV </label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv79"  name="ck3[]" value="Pelampung life Vest">
                                             <label for="mydiv79"> Pelampung life Vest </label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv710" name="ck3[]" value="Tabung Pernafasan">
                                             <label for="mydiv710"> Tabung Pernafasan </label><br>
                                         </div>
 
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv711" name="ck3[]" value="Full-Body Harness">
                                             <label for="mydiv711"> Full-Body Harness </label><br>
                                         </div>
@@ -404,22 +459,24 @@ textarea {
                                         <div class="input-field col s10 " >
                                             <input type="text" disabled name="ck3[]" id="inck3">
                                         </div>
+                                        <div class="input-field col s12"></div>
+                                        <div class="input-field col s12"></div>
                                         <br>
                                         <br>
                                         <p>Perlengkapan keselamatan & darurat</p>
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv81" name="ck4[]" value="Pemadam Api (APAR dll)">
                                             <label for="mydiv81"> Pemadam Api (APAR dll)</label><br>
                                         </div>
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv82" name="ck4[]" value="Rambu Keselamatan">
                                             <label for="mydiv82"> Rambu Keselamatan</label><br>
                                         </div>
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv83" name="ck4[]" value="LOTO (lock out tag out)">
                                             <label for="mydiv83"> LOTO (lock out tag out)</label><br>
                                         </div>
-                                        <div class="input-field ">
+                                        <div class="input-field col s12 ">
                                             <input type="checkbox" id="mydiv84" name="ck4[]" value="Radio Telekomunikasi">
                                             <label for="mydiv84"> Radio Telekomunikasi</label><br>
                                         </div>
@@ -433,8 +490,8 @@ textarea {
                                         
                                         <div class="input-field col s12"></div>
                                         <div class="input-field col s12"></div>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform9()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform10()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform9()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform10()">next</button>
                                     </div>
 
                                     <div id="myDIV11" style="display: none;" >
@@ -448,23 +505,30 @@ textarea {
                                         
                                         <br>
                                         <p>Dasar Penulisan</p>
-                                        <img src="assets/images/Capture73983279.jpg" alt="">
+                                        <img src="images/Capture73983279.jpg" alt="">
                                         <br>
-                                        <div class="input-field ">
-                                            <label for="mydiv92"> Uraikan Langkah Pekerjaan</label>
-                                            <textarea cols="1" required class="custom-file-input" type="text" name="langkah_pekerjaan"  id="mydiv92"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv93"> Uraikan Potensi Bahaya dan Resiko</label>
-                                            <textarea cols="1" required  type="text" name="potensi_bahaya_dan_resiko"  id="mydiv93"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv94"> Uraikan Tindakan Pengendalian</label>
-                                            <textarea cols="1" required  type="text"  name="tindakan_pengendalian"  id="mydiv94"></textarea>
-                                        </div>
+                                        <table id="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Uraikan Langkah Pekerjaan</th>
+                                                    <th>Uraikan Potensi Bahaya dan Resiko</th>
+                                                    <th>Uraikan Tindakan Pengendalian</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input cols="1" required class="custom-file-input" type="text" name="langkah_pekerjaan[]"  id="mydiv92"></td>
+                                                    <td><input cols="1" required  type="text" name="potensi_bahaya_dan_resiko[]"  id="mydiv93"></td>
+                                                    <td><input cols="1" required  type="text"  name="tindakan_pengendalian[]"  id="mydiv94"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                         <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform10()">back</button>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform11()">next</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="addcolumn()">Tambah Pelaksana</button>
+                                        <br>
+                                        <br>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform10()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform11()">next</button>
                                     </div>
                                     <div id="myDIV12" style="display: none;">
                                         <h5>3. Identifikasi Bahaya, Penilaian dan Pengendalian resiko</h5>
@@ -502,7 +566,7 @@ textarea {
                                             <input required  type="text" name="halaman" class="custom-file-input"  id="mydiv107">
                                         </div>
                                         <p>Dasar Penulisan</p>
-                                        <img src="assets/images/Capture29920.jpg" alt="">
+                                        <img src="images/Capture29920.jpg" alt="">
                                         <br>
 
                                         <p>Perhatian! Isi uraian dengan prosedur terurut yang baik dan benar
@@ -567,9 +631,9 @@ textarea {
                                             <input required  type="text"  name="penanggung_jawab" class="custom-file-input"  id="mydiv1015" >
                                         </div>  
                                         <br>
-                                        <button class="waves-effect waves-light btn orange dark-1" onclick="myform11()">back</button>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform11()">back</button>
                                         <right>
-                                        <input required  type="submit"  id="save" name="save" class="waves-effect waves-light btn orange dark-1">
+                                        <input required  type="submit"  id="save" name="save" class="waves-effect waves-light btn blue-grey dark-1">
                                         </right>
                                         
                                     </div>

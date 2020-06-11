@@ -870,3 +870,123 @@
 [27-May-2020 07:00:14 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/k5222396/public_html/index.php on line 3
 [27-May-2020 07:00:53 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/k5222396/public_html/index.php on line 3
 [27-May-2020 07:01:27 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/k5222396/public_html/index.php on line 3
+[10-Jun-2020 16:10:29 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:10:29 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:10:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 16:10:30 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:10:30 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:10:30 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 16:11:07 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:11:07 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:11:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 16:43:48 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:43:48 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:43:48 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 16:45:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:45:56 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:45:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 16:46:07 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:46:07 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:46:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 16:46:29 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 16:46:29 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 16:46:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:00:25 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:00:25 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:00:25 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:00:57 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:00:57 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:00:57 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:12:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:12:56 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:12:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:13:21 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:13:21 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:13:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:13:33 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:13:33 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:13:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:13:40 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:13:40 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:13:40 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:13:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:13:56 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:13:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:14:29 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:14:29 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:14:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:14:42 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:14:42 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:14:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:15:08 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:15:08 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:15:08 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:15:43 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:15:43 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:15:43 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:16:31 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:16:31 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:16:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:16:44 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:16:44 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:16:44 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:16:56 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:16:56 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:16:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:17:10 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:17:10 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:17:10 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:17:38 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:17:38 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:17:38 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:17:54 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:17:54 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:17:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:18:31 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:18:31 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:18:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:19:15 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:19:15 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:19:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:21:29 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:21:29 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:21:29 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:27:18 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:27:18 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:27:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:31:00 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:31:00 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:31:00 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:31:09 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:31:09 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:31:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:31:35 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:31:35 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:31:35 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:32:15 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:32:15 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:32:15 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:34:11 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:34:11 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:34:11 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:34:31 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:34:31 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:34:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:36:16 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:36:16 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:36:16 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 17:36:26 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 17:36:26 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 17:36:26 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[10-Jun-2020 19:27:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[10-Jun-2020 19:27:02 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[10-Jun-2020 19:27:02 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[11-Jun-2020 01:45:43 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[11-Jun-2020 01:45:43 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[11-Jun-2020 01:45:43 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[11-Jun-2020 02:24:08 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[11-Jun-2020 02:24:08 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[11-Jun-2020 02:24:08 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48
+[11-Jun-2020 02:42:20 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/k5222396/public_html/signup.php on line 4
+[11-Jun-2020 02:42:20 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/k5222396/public_html/signup.php on line 47
+[11-Jun-2020 02:42:20 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/k5222396/public_html/signup.php on line 48

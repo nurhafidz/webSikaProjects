@@ -41,7 +41,7 @@
         </div>
         <div class="mn-content fixed-sidebar">
             <header class="mn-header navbar-fixed">
-                <nav class="orange darken-1">
+                <nav class="blue-grey darken-1">
                     <div class="nav-wrapper row">
                         <section class="material-design-hamburger navigation-toggle">
                             <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
@@ -123,7 +123,7 @@ foreach($results as $result)
                                     <li>
                                         <a href="editemployee.php?empid=<?php echo htmlentities($result->id);?>">
                                         <div class="notification">
-                                            <div class="notification-icon circle cyan"><i class="material-icons">user</i></div>
+                                            <div class="notification-icon circle blue-grey"><i class="material-icons">account_circle</i></div>
                                             <div class="notification-text"><p><b><?php echo htmlentities($result->FirstName." ".$result->LastName);?><br />(<?php echo htmlentities($result->EmpId);?>)</b>New User</p><span>Approv or no <?php echo htmlentities($result->PostingDate);?></b</span></div>
                                         </div>
                                         </a>
@@ -148,7 +148,7 @@ foreach($results as $result)
                                     <li>
                                         <a href="showformwp.php?frid=<?php echo htmlentities($result->id);?>">
                                         <div class="notification">
-                                            <div class="notification-icon circle cyan"><i class="material-icons">keyboard_arrow_right</i></div>
+                                            <div class="notification-icon circle blue-grey"><i class="material-icons">text_snippet</i></div>
                                             <div class="notification-text"><p><b><?php echo htmlentities($result->Email);?><br /></b>New Form WP post</p><span>Accept or no <?php echo htmlentities($result->PostingDate);?></b</span></div>
                                         </div>
                                         </a>

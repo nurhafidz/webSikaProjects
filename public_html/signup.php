@@ -18,7 +18,7 @@ if (isset($_POST['signup'])) {
     $EmpId =$_POST['EmpId'];
     $Status ='0';
 
-   $encryptPassword = md5($Password, PASSWORD_DEFAULT);
+   $encryptPassword = md5($Password);
     
     $sql = "INSERT INTO tblemployees (EmpId,FirstName,LastName,EmailId,Password,Gender,Dob,Department,Address,City,Country,Phonenumber,Status) 
     VALUES (:empId,:fname,:lname,:email,:pass,:gender,:dob,:department,:address,:city,:country,:mobileno,'$Status')";
@@ -120,7 +120,7 @@ $count=mysqli_num_rows($result);
         
         <div class="mn-content fixed-sidebar">
             <header class="mn-header navbar-fixed">
-                <nav class="orange darken-1">
+                <nav class="blue-grey darken-1">
                     <div class="nav-wrapper row">
                         <section class="material-design-hamburger navigation-toggle">
                             <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
@@ -130,6 +130,12 @@ $count=mysqli_num_rows($result);
                         <div class="header-title col s3">
                             <span class="chapter-title">WP</span>
                         </div>
+                        <div class="header-title col s8">
+                        </div>
+                        <div class="header-title col s1">
+                            <img src="images/logopln.png" width="90%" alt="">
+                        </div>
+
 
 
                         </form>
@@ -162,7 +168,8 @@ $count=mysqli_num_rows($result);
                 <div class="row">
                 
                 <div class="col s12">
-                        <div class="page-title"><h4 style="text-align:center">SikaProjects</h4></div>
+                        <div class="page-title"><h4 style="text-align:center">Sistem Izin Kerja</h4></div>
+                        
                         
 			   <!-- <button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn"><span id="notification-count"><?php if($count>0) { echo $count; } ?></span><i class="material-icons">notifications_none</i></button>
 				 <div id="notification-latest"></div>
@@ -251,7 +258,7 @@ $count=mysqli_num_rows($result);
                                                </div>
                                                <div class="col s12 right-align m-t-sm">
 
-                                                   <input type="submit" name="signup" value="Sign up" class="waves-effect waves-light btn orange dark-1">
+                                                   <input type="submit" name="signup" value="Sign up" class="waves-effect waves-light btn blue-grey dark-1">
                                                </div>
                                            </form>
                                       </div>

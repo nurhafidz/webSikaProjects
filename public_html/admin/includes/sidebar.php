@@ -73,14 +73,7 @@
                                 <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Sign Out</a>
                             </li>  
                             
-                            <li class="no-padding orange darken-1">
-                                <a class="waves-effect waves-grey" " href="https://docs.google.com/forms/d/1IB0u3AuKDoDOo8e8f093R63SgNxnfG6uCcG0p0MHxe4/edit#responses">Permintaan Registrasi user</a>
-                            </li> 
                             
-                            <li class="no-padding orange darken-2">
-                               
-                                <a class="waves-effect waves-grey" " href="https://docs.google.com/forms/d/17tcUEgsUbCQPKtzR7tRBMRCtDHRN3dov7rGcri21BLg/edit?usp=sharing">Formulir WP Aproval</a>
-                            </li> 
                  
 
                  

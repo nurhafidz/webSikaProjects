@@ -47,7 +47,7 @@ echo "<script type='text/javascript'> document.location = 'changepassword.php'; 
     </head>
     <body class="signin-page">
 
-        <div class="mn-content valign-wrapper orange dark-1">
+        <div class="mn-content valign-wrapper blue-grey dark-1">
 
             <main class="mn-inner container">
   <h4 align="center"><a href="../index.php" style="color:white">WP Approval SikaProjects | Admin Login</a></h4>
@@ -70,7 +70,7 @@ echo "<script type='text/javascript'> document.location = 'changepassword.php'; 
                                                </div>
                                                <div class="col s12 right-align m-t-sm">
                                                 
-                                                   <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn orange dark-1">
+                                                   <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn blue-grey dark-1">
                                                </div>
                                            </form>
                                       </div>

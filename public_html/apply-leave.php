@@ -96,7 +96,7 @@ $error="Something went wrong. Please try again";
                             <div class="card-content">
                                 <form id="example-form" method="post" name="addemp">
                                     <div>
-                                        <h3>Apply for Leave</h3>
+                                        
                                         <section>
                                             <div class="wizard-content">
                                                 <div class="row">
@@ -133,7 +133,7 @@ foreach($results as $result)
 <input placeholder="" id="mask1" name="todate" class="masked" type="text" data-inputmask="'alias': 'date'" required>
 </div>
 <div class="input-field col m12 s12">
-<label for="birthdate">Description beserta link gooogle formulir wp anda.. (jika sdh selesai isi formulir, lalu klik 'edit tanggapan anda' dan salin link tersebut lalu masukkan kesini)</label>    
+<label for="birthdate">pesan</label>    
 
 <textarea id="textarea1" name="description" class="materialize-textarea" length="500" required></textarea>
 </div>

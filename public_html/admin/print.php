@@ -114,7 +114,22 @@ else{
 </div>
 <div class="book">
     <div class="page">
-        <p class="text-right mr-5">No Dok :</p>
+        <?php 
+            $eid=intval($_GET['frid']);
+            $sql = "SELECT * from  tbljobinformation where id=:eid";
+            $query = $dbh -> prepare($sql);
+            $query -> bindParam(':eid',$eid, PDO::PARAM_STR);
+            $query->execute();
+            $results=$query->fetchAll(PDO::FETCH_OBJ);
+            $cnt=1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {               ?>
+        <p class="text-right mr-5">No Dok :  <?php
+        $Status=$result->Status;
+         if ($Status =="1") {
+             echo htmlentities($result->id); ?>-UPPJJBB-<?php echo date("Y"); ?></p>
+        <?php
+         } ?></p>
         <div class="text-center">
           <h3 >WORKING PERMIT</h3>
           <hr class="col-sm-5">
@@ -131,18 +146,6 @@ else{
                     <p class="font-weight-bold p-2 mt-2">A. INFORMASI PEKERJAAN</p>
                 </div>    
             </div>    
-
-        <?php 
-            $eid=intval($_GET['frid']);
-            $sql = "SELECT * from  tbljobinformation where id=:eid";
-            $query = $dbh -> prepare($sql);
-            $query -> bindParam(':eid',$eid, PDO::PARAM_STR);
-            $query->execute();
-            $results=$query->fetchAll(PDO::FETCH_OBJ);
-            $cnt=1;
-            if ($query->rowCount() > 0) {
-                foreach ($results as $result) {               ?> 
-        
             <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-1">
