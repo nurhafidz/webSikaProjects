@@ -48,7 +48,7 @@
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">      
+                        <div class="header-title col s11">      
                             <span class="chapter-title">Approval WP | Employee</span>
                         </div>
                      

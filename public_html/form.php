@@ -44,9 +44,6 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 textarea {
     border:none;
     border-bottom: 1px solid #BCBCBC;
@@ -59,15 +56,10 @@ textarea {
 <script>
 function addinput() {
     var parent = document.getElementById("addinput");
-    var y = document.createElement("LABEL");
     var x = document.createElement("INPUT");
-    var t = document.createTextNode("Pelaksana Pekerjaan");
-    y.setAttribute("for", "idpk");
     x.setAttribute("type", "text");
     x.setAttribute("id", "idpk");
     x.setAttribute("name", "pelaksana_pekerjaan[]");
-    y.appendChild(t);
-    parent.appendChild(y);
     parent.appendChild(x);
 }
 function addcolumn(){

@@ -118,10 +118,8 @@ else{
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">
+                        <div class="header-title col s11">
                             <span class="chapter-title">Sistem Aplikasi Izin Kerja</span>
-                        </div>
-                        <div class="header-title col s8">
                         </div>
                         <div class="header-title col s1">
                             <img src="images/logopln.png" width="90%" alt="">

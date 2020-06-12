@@ -127,10 +127,8 @@ $count=mysqli_num_rows($result);
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">
-                            <span class="chapter-title">WP</span>
-                        </div>
-                        <div class="header-title col s8">
+                        <div class="header-title col s11">
+                            <span class="chapter-title">SISTEM APLIKASI IZIN KERJA</span>
                         </div>
                         <div class="header-title col s1">
                             <img src="images/logopln.png" width="90%" alt="">

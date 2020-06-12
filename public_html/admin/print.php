@@ -14,8 +14,8 @@ else{
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -27,6 +27,8 @@ else{
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <style type="text/css">
 /* Kode CSS Untuk PAGE ini dibuat oleh http://jsfiddle.net/2wk6Q/1/ */
+
+
     p{
         font-size:11px;
         margin: 0;
@@ -42,6 +44,7 @@ else{
    padding: 0;  
     }
     body {
+        
         width: 100%;
         height: 100%;
         background-color:grey;
@@ -101,7 +104,7 @@ else{
 </head>
 <body>
 <div class="sticky-top" id="bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" width="100%">
         <a class="btn btn-light" href="formwp.php" type="button" >
         <i class="material-icons p-1" title="Accept">keyboard_backspace</i></a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -112,7 +115,7 @@ else{
         </div>
     </nav>
 </div>
-<div class="book">
+<div class="book container-fluid">
     <div class="page">
         <?php 
             $eid=intval($_GET['frid']);

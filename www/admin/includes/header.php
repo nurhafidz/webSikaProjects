@@ -48,11 +48,11 @@
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">      
+                        <div class="header-title col s11">      
                             <span class="chapter-title">Approval WP | Admin</span>
                         </div>
                       
-                        <ul class="right col s9 m3 nav-right-menu">
+                        <ul class="right col s1 m3 nav-right-menu">
                         
                             <li><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i>
 <?php 
