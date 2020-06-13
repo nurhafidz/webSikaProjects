@@ -1,8 +1,8 @@
 <?php 
 // DB credentials.
 define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
+define('DB_USER','k5222396_elms12');
+define('DB_PASS','akuanakcerdas12YAGA#');
 define('DB_NAME','k5222396_elms');
 try
 {

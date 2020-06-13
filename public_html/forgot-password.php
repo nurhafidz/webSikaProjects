@@ -22,7 +22,7 @@ $msg="Your Password succesfully changed";
     <head>
         
         <!-- Title -->
-        <title>WP Approval PT. PLN (Persero)</title>
+        <title>WP Approval </title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
@@ -57,6 +57,13 @@ $msg="Your Password succesfully changed";
     box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 }
         </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<style>
+    body{
+      font-family: 'Sriracha', cursive;  
+    }
+</style>
         
     </head>
     <body>
@@ -103,15 +110,15 @@ $msg="Your Password succesfully changed";
         </div>
         <div class="mn-content fixed-sidebar">
             <header class="mn-header navbar-fixed">
-                <nav class="orange darken-1">
+                <nav class="blue-grey darken-1">
                     <div class="nav-wrapper row">
                         <section class="material-design-hamburger navigation-toggle">
                             <a href="#" data-activates="slide-out" class="button-collapse show-on-large material-design-hamburger__icon">
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">      
-                            <span class="chapter-title">WP Approval</span>
+                        <div class="header-title col s11">
+                            <span class="chapter-title">Sistem Aplikasi Izin Kerja</span>
                         </div>
                       
                            
@@ -129,42 +136,42 @@ $msg="Your Password succesfully changed";
                   
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion" style="">
                     <li>&nbsp;</li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i class="material-icons">account_box</i>Employe Login</a></li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="forgot-password.php"><i class="material-icons">account_box</i>Lupa Password?</a></li>
-                
-                       <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i class="material-icons">account_box</i>Admin Login</a></li>
-                
+                    <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i class="material-icons">account_box</i>Login/Signup</a></li>
+
+                       <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i class="material-icons">account_box</i>Admin</a></li>
+
                 </ul>
-          <div class="footer">
-                    <p class="copyright"><a href="https://nisacodelifings.netlify.com/">nisacodelifings</a>©</p>
-                
+
+           <div class="footer">
+                    <p class="copyright" style="color:grey">The code is Maintained by <a style="color: hotpink;text-decoration: underline;text-decoration-style: wavy;text-decoration-color: hotpink" href="https://nisapinklava.netlify.com/">nisapinklava.netlify.com ©</a></p>
+
                 </div>
                 </div>
             </aside>
             <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
-                        <div class="page-title"><h4>Lupa Password | Employee</h4></div>
+                        <div class="page-title"><h4></h4></div>
 
                           <div class="col s12 m6 l8 offset-l2 offset-m3">
                               <div class="card white darken-1">
 
                                   <div class="card-content ">
-                                      <span class="card-title" style="font-size:20px;">Employee details</span>
+                                      <span class="card-title" style="font-size:20px;">Lupa Password</span>
                                          <?php if($msg){?><div class="succWrap"><strong>Success </strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
                                        <div class="row">
                                            <form class="col s12" name="signin" method="post">
                                                <div class="input-field col s12">
                                                    <input id="empid" type="text" name="empid" class="validate" autocomplete="off" required >
-                                                   <label for="email">Employee Id</label>
+                                                   <label for="email">Username</label>
                                                </div>
                                                <div class="input-field col s12">
                                                    <input id="password" type="text" class="validate" name="emailid" autocomplete="off" required>
-                                                   <label for="password">Email id</label>
+                                                   <label for="password">Email</label>
                                                </div>
                                                <div class="col s12 right-align m-t-sm">
                                                 
-                                                   <input type="submit" name="submit" value="Sign in" class="waves-effect waves-light btn orange dark-1">
+                                                   <input type="submit" name="submit" value="Ganti Password" class="waves-effect waves-light btn blue-grey dark-1">
                                                </div>
                                            </form>
                                       </div>
@@ -186,8 +193,9 @@ foreach ($results as $result) {
   } 
     ?>
 
- <div class="row">
-          <span class="card-title" style="font-size:20px;">change your password </span>                                     
+ 
+                          </div>
+                          <div class="row">                                     
     <form class="col s12" name="udatepwd" method="post">
   <div class="input-field col s12">
  <input id="password" type="password" name="newpassword" class="validate" autocomplete="off" required>
@@ -201,7 +209,7 @@ foreach ($results as $result) {
 
 
 <div class="input-field col s12">
-<button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Change</button>
+<button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Ganti</button>
 
 </div>
 </div>
@@ -218,7 +226,6 @@ foreach ($results as $result) {
 
 
                               </div>
-                          </div>
                     </div>
                 </div>
             </main>

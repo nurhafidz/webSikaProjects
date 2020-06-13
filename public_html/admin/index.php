@@ -44,20 +44,28 @@ echo "<script type='text/javascript'> document.location = 'changepassword.php'; 
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">        
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<style>
+    body{
+      font-family: 'Sriracha', cursive;  
+    }
+</style>
     </head>
     <body class="signin-page">
 
         <div class="mn-content valign-wrapper blue-grey dark-1">
 
+
+
             <main class="mn-inner container">
-  <h4 align="center"><a href="../index.php" style="color:white">WP Approval SikaProjects | Admin Login</a></h4>
+  <h4 align="center"><a href="../index.php" style="color:white">Selamat datang, Admin^^</a></h4>
                 <div class="valign">
                       <div class="row">
 
                           <div class="col s12 m6 l4 offset-l4 offset-m3">
                               <div class="card white darken-1">
                                   <div class="card-content ">
-                                      <span class="card-title">Sign In</span>
+                                      <span class="card-title"></span>
                                        <div class="row">
                                            <form class="col s12" name="signin" method="post">
                                                <div class="input-field col s12">

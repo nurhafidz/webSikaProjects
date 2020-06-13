@@ -66,7 +66,12 @@ $count=mysqli_num_rows($result);
     <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<style>
+    body{
+      font-family: 'Sriracha', cursive;  
+    }
+</style>
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
@@ -131,7 +136,7 @@ $count=mysqli_num_rows($result);
                             <span class="chapter-title">SISTEM APLIKASI IZIN KERJA</span>
                         </div>
                         <div class="header-title col s1">
-                            <img src="images/logopln.png" width="90%" alt="">
+                          
                         </div>
 
 
@@ -150,14 +155,13 @@ $count=mysqli_num_rows($result);
 
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion" style="">
                     <li>&nbsp;</li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i class="material-icons">account_box</i>Employe Login</a></li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="forgot-password.php"><i class="material-icons">account_box</i>Lupa Password?</a></li>
+                    <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i class="material-icons">account_box</i>Login/Signup</a></li>
 
-                       <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i class="material-icons">account_box</i>Admin Login</a></li>
+                       <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i class="material-icons">account_box</i>Admin</a></li>
 
                 </ul>
-          <div class="footer" style="color:orange">
-                    <p class="copyright" style="color:orange"><a href="https://nisacodelifings.netlify.com/">nisacodelifings</a>©</p>
+          <div class="footer">
+                    <p class="copyright" style="color:grey">The code is Maintained by <a style="color: hotpink;text-decoration: underline;text-decoration-style: wavy;text-decoration-color: hotpink" href="https://nisapinklava.netlify.com/">nisapinklava.netlify.com ©</a></p>
 
                 </div>
                 </div>
@@ -166,7 +170,9 @@ $count=mysqli_num_rows($result);
                 <div class="row">
                 
                 <div class="col s12">
-                        <div class="page-title"><h4 style="text-align:center">Sistem Izin Kerja</h4></div>
+                        <div class="page-title">
+                          
+                        </div>
                         
                         
 			   <!-- <button id="notification-icon" name="button" onclick="myFunction()" class="dropbtn"><span id="notification-count"><?php if($count>0) { echo $count; } ?></span><i class="material-icons">notifications_none</i></button>
@@ -179,12 +185,13 @@ $count=mysqli_num_rows($result);
                               <div class="card white darken-1">
             
                                   <div class="card-content ">
-                                      <span class="card-title" style="font-size:20px;">Employee Sign Up</span>
+                                      <span class="card-title" style="font-size:20px;">Buat akun</span>
+                                      <p>Perhatian! Setelah anda mendaftar, anda harus menunggu persetujuan dari admin untuk bisa memasuki akun anda. JIka disetujui, maka anda harus login di halaman utama</p><br>
                                        <div class="row">
                                            <form class="col s12" name="frmNotification" onSubmit="return validate();" method="post" id="frmNotification">
                                                <div class="input-field col s12">
                                                    <input id="EmpId" type="text" name="EmpId" class="validate input-field col s6" autocomplete="off" required >
-                                                   <label for="EmpId">Employee Id</label>
+                                                   <label for="EmpId"> Username</label>
                                                </div>
                                               
                                                <div class="input-field col s6">
@@ -199,28 +206,18 @@ $count=mysqli_num_rows($result);
                                                    <input id="email" type="text" name="email" class="validate" autocomplete="off" required >
                                                    <label for="email">Email</label>
                                                </div>
-                                               <div class="input-field col s6">
-                                                   <select id="gender" type="text" name="gender" class="validate" autocomplete="off" required >
-                                                   <option value="">Gender</option>
-                                                   <option value="Male">Male</option>
-                                                   <option value="Female">Female</option>
-                                                   <option value="Other">Other</option>
-                                                   </select>
-                                               </div>
+                                               
+                                                   
                                                <div class="input-field col s6">
                                                    <input id="telp" type="number" name="telp" class="validate" autocomplete="off" required >
-                                                   <label for="telp">Telephone number</label>
+                                                   <label for="telp">No. Telp</label>
                                                </div>
-                                               <div class="input-field col s6">
-                                                    <p>date of birth</p>
-                                                   <input id="dob" type="date" name="dob" class="validate datepicker" autocomplete="off" required placeholder="date of birth">
-                                                   <label for="dob"></label>
-                                               </div>
+                                               
                                                <div class="input-field col s12">
                                                </div>
                                                <div class="input-field col s6">
                                                <select name="department" autocomplete="off" required>
-                                                    <option value="" disable>Department</option>
+                                                    <option value="" disable>Nama Vendor</option>
                                                     <?php $sql = "SELECT DepartmentName from tbldepartments";
                                                     $query = $dbh -> prepare($sql);
                                                     $query->execute();
@@ -236,16 +233,9 @@ $count=mysqli_num_rows($result);
                                                </div>
                                                <div class="input-field col s6">
                                                    <input id="Address" type="text" name="Address" class="validate" autocomplete="off" required >
-                                                   <label for="address">Address</label>
+                                                   <label for="address">Alamat Kantor</label>
                                                </div>
-                                               <div class="input-field col s6">
-                                                   <input id="city" type="text" name="city" class="validate" autocomplete="off" required >
-                                                   <label for="city">City/Town</label>
-                                               </div>
-                                               <div class="input-field col s6">
-                                                   <input id="Country" type="text" name="Country" class="validate" autocomplete="off" required >
-                                                   <label for="Country">Country</label>
-                                               </div>
+                                               
                                                <div class="input-field col s12">
                                                    <input id="makepassword" type="password" class="validate" name="password" autocomplete="off" required>
                                                    <label for="password">Password</label>
