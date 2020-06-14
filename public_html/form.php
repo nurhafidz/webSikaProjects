@@ -51,10 +51,126 @@ textarea {
     box-shadow:  #BCBCBC;
     outline: none !important;
 }
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
 
 </style>
 <script>
-
+function addcolumn2(){
+    var table = document.getElementById("table2");
+    var x = document.createElement("TEXTAREA");
+    var y = document.createElement("TEXTAREA");
+    x.setAttribute("type", "text");
+    x.setAttribute("name", "kegiatan[]");
+    x.required=true;
+    y.setAttribute("type", "text");
+    y.setAttribute("name", "potensi_bahaya[]");
+    y.required=true;
+    var row = table.insertRow(2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.appendChild(x);
+    cell2.appendChild(y);
+}
+function addcolumn3(){
+    var table1 = document.getElementById("table3");
+    var table2 = document.getElementById("table4");
+    var x = document.createElement("TEXTAREA");
+    var y = document.createElement("TEXTAREA");
+    var z = document.createElement("TEXTAREA");
+    var a = document.createElement("TEXTAREA");
+    x.setAttribute("type", "text");
+    x.setAttribute("name", "resiko[]");
+    x.required=true;
+    y.setAttribute("type", "text");
+    y.setAttribute("name", "Consequences[]");
+    y.required=true;
+    z.setAttribute("type", "text");
+    z.setAttribute("name", "Possibility[]");
+    z.required=true;
+    a.setAttribute("type", "text");
+    a.setAttribute("name", "LevelOfRisk[]");
+    a.required=true;
+    var row = table1.insertRow(2);
+    var cell11 = row.insertCell(0);
+    var row = table2.insertRow(3);
+    var cell12 = row.insertCell(0);
+    var cell22 = row.insertCell(1);
+    var cell32 = row.insertCell(2);
+    cell11.appendChild(x);
+    cell12.appendChild(y);
+    cell22.appendChild(z);
+    cell32.appendChild(a);
+}
+function addcolumn4(){
+    var table1 = document.getElementById("table5");
+    var table2 = document.getElementById("table6");
+    var x = document.createElement("TEXTAREA");
+    var y = document.createElement("TEXTAREA");
+    var z = document.createElement("TEXTAREA");
+    var a = document.createElement("TEXTAREA");
+    x.setAttribute("type", "text");
+    x.setAttribute("name", "RiskControl[]");
+    x.required=true;
+    y.setAttribute("type", "text");
+    y.setAttribute("name", "Consequences2[]");
+    y.required=true;
+    z.setAttribute("type", "text");
+    z.setAttribute("name", "Possibility2[]");
+    z.required=true;
+    a.setAttribute("type", "text");
+    a.setAttribute("name", "LevelOfRisk2[]");
+    a.required=true;
+    var row = table1.insertRow(2);
+    var cell11 = row.insertCell(0);
+    var row = table2.insertRow(3);
+    var cell12 = row.insertCell(0);
+    var cell22 = row.insertCell(1);
+    var cell32 = row.insertCell(2);
+    cell11.appendChild(x);
+    cell12.appendChild(y);
+    cell22.appendChild(z);
+    cell32.appendChild(a);
+}
+function addcolumn5(){
+    var table = document.getElementById("table7");
+    var x = document.createElement("INPUT");
+    var y = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("name", "status_pengendalian[]");
+    x.required=true;
+    y.setAttribute("type", "text");
+    y.setAttribute("name", "penanggung_jawab[]");
+    y.required=true;
+    var row = table.insertRow(2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.appendChild(x);
+    cell2.appendChild(y);
+}
 </script>
 
     </head>
@@ -519,58 +635,114 @@ textarea {
                                         <p>2. ----------</p>
                                         <p>3. ----------</p>
                                         <p>4. dan seterusnya</p>
-
-                                        <div class="input-field ">
-                                            <label for="mydiv108"> Kegiatan</label>
-                                            <textarea cols="1" required  type="text" name="kegiatan" class="custom-file-input"  id="mydiv108"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv109"> Potensi Bahaya</label>
-                                            <textarea cols="1" required  type="text" name="potensi_bahaya" class="custom-file-input"  id="mydiv109"></textarea>
-                                        </div>
+                                        <table id="table2" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Kegiatan</th>
+                                                    <th>Potensi Bahaya</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><textarea cols="1" required  type="text" name="kegiatan[]" class="custom-file-input"  id="mydiv108"></textarea></td>
+                                                    <td><textarea cols="1" required  type="text" name="potensi_bahaya[]" class="custom-file-input"  id="mydiv109"></textarea></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="addcolumn2()">Tambah baris</button>
+                                        <br>
                                         
                                         <hr>
-                                        <div class="input-field ">
-                                            <label for="mydiv1010"> Resiko</label>
-                                            <textarea cols="1" required  type="text" name="resiko" class="custom-file-input"  id="mydiv1010"></textarea>
+                                        <div style="overflow-x:auto;">
+                                            <table id="table3" class="col-4" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Resiko</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td ><textarea cols="2" required  type="text" name="resiko[]" class="custom-file-input"  id="mydiv1010"></textarea></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table id="table4" class="col-8">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="3">Penilaian Resiko</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Konsekuensi</th>
+                                                        <th>Kemungkinan</th>
+                                                        <th>Tingkat Resiko</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><textarea cols="1" required  type="text" name="Consequences[]" class="custom-file-input"  id="mydiv1010"></textarea></td>
+                                                        <td><textarea cols="1" required  type="text" name="Possibility[]" class="custom-file-input"  id="mydiv1010"></textarea></td>
+                                                        <td><textarea cols="1" required  type="text" name="LevelOfRisk[]" class="custom-file-input"  id="mydiv1010"></textarea></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                        <p>Penilaian Resiko</p>
-                                        <div class="input-field ">
-                                            <label for="mydiv1010"> Konsekuensi</label>
-                                            <textarea cols="1" required  type="text" name="Consequences" class="custom-file-input"  id="mydiv1010"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1010"> Kemungkinan</label>
-                                            <textarea cols="1" required  type="text" name="Possibility" class="custom-file-input"  id="mydiv1010"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1010"> Tingkat Resiko</label>
-                                            <textarea cols="1" required  type="text" name="LevelOfRisk" class="custom-file-input"  id="mydiv1010"></textarea>
-                                        </div>
-                                        <hr>
-                                        <p>Pengendalian Resiko</p>
-                                        <div class="input-field ">
-                                            <label for="mydiv1011"> Pengendalian Resiko</label>
-                                            <textarea cols="1" required  type="text" name="RiskControl" class="custom-file-input"  id="mydiv1011"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1011"> Kemungkinan</label>
-                                            <textarea cols="1" required  type="text" name="Consequences2" class="custom-file-input"  id="mydiv1011"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1013"> Tingkat Resiko</label>
-                                            <textarea cols="1" required  type="text" name="LevelOfRisk2" class="custom-file-input"  id="mydiv1013"></textarea>
-                                        </div>
-                                        <hr>
-                                        <div class="input-field ">
-                                            <label for="mydiv1014"> Status Pengendalian</label>
-                                            <input required  type="text" name="status_pengendalian" class="custom-file-input"  id="mydiv1014">
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1015"> Penanggung Jawab</label>
-                                            <input required  type="text"  name="penanggung_jawab" class="custom-file-input"  id="mydiv1015" >
-                                        </div>  
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="addcolumn3()">Tambah baris</button>
                                         <br>
+                                        
+                                        <hr>
+                                        <div style="overflow-x:auto;">
+                                            <table id="table5" class="col-4" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Pengendalian Resiko</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td ><textarea cols="1" required  type="text" name="RiskControl[]" class="custom-file-input"  id="mydiv1011"></textarea></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table id="table6" class="col-8">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan="3">Pengendalian Resiko</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Konsekuensi</th>
+                                                        <th>Kemungkinan</th>
+                                                        <th>Tingkat Resiko</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><textarea cols="1" required  type="text" name="Consequences2[]" class="custom-file-input"  id="mydiv1011"></textarea></td>
+                                                        <td><textarea cols="1" required  type="text" name="Possibility2[]" class="custom-file-input"  id="mydiv1011"></textarea></td>
+                                                        <td><textarea cols="1" required  type="text" name="LevelOfRisk2[]" class="custom-file-input"  id="mydiv1013"></textarea></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <button class="waves-effect waves-light btn blue-grey dark-1" onclick="addcolumn4()">Tambah baris</button>
+                                        <hr>
+                                        <table id="table7" >
+                                                <thead>
+                                                    <tr>
+                                                        <th>Status Pengendalian</th>
+                                                        <th>Penanggung Jawab</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input required  type="text" name="status_pengendalian[]" class="custom-file-input"  id="mydiv1014"></td>
+                                                        <td><input required  type="text"  name="penanggung_jawab[]" class="custom-file-input"  id="mydiv1015" ></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <button class="waves-effect waves-light btn blue-grey dark-1" onclick="addcolumn5()">Tambah baris</button>
+                                        <br>
+                                        <div class="input-field col s12"></div>
+                                        <div class="input-field col s12"></div>
                                         <button class="waves-effect waves-light btn blue-grey dark-1" onclick="myform11()">back</button>
                                         <right>
                                         <input required  type="submit"  id="save" name="save" class="waves-effect waves-light btn blue-grey dark-1">

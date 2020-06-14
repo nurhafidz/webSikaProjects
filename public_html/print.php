@@ -762,7 +762,7 @@ else{
                         </tr>
                         <?php
                         $number=1;
-                        $a = explode(",",$result->Activity  );
+                        $a = explode(",",$result->Activity);
                         $b = explode(",",$result->PotentialHazard);
                         $c = explode(",",$result->onsequence);
                         $d = explode(",",$result->LevelOfRisk2);

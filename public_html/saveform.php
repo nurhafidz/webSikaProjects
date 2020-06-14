@@ -28,7 +28,7 @@ if (isset($_POST['save'])) {
     $email=$_POST['email'];
     $firstname=$result->FirstName;
     $Lastname=$result->LastName;
-    $Pengawas_Pekerjaan=$firstname." ".$lastname;
+    $Pengawas_Pekerjaan=$firstname." ".$Lastname;
     $telp1=$result->Phonenumber;
 
     //f1
@@ -60,7 +60,7 @@ if (isset($_POST['save'])) {
     $jenis_pekerjaan2=$_POST['jenis_pekerjaan'];
     $lokasi_pekerjaan2=$_POST['lokasi_pekerjaan'];
     $perusahaan_pelaksana=$_POST['perusahaan_pelaksana'];
-    $pengawas_pekerjaan=$firstname." ".$lastname;
+    $pengawas_pekerjaan=$firstname." ".$Lastname;
     $pelaksana_pekerjaan=implode(",", $_POST['pelaksana_pekerjaan']);
     //f7
     $ck3=implode(",", $_POST['ck3']);
@@ -77,19 +77,19 @@ if (isset($_POST['save'])) {
     $tgl3=$_POST['tgl3'];
     $revisi=$_POST['revisi'];
     $halaman=$_POST['halaman'];
-    $kegiatan=$_POST['kegiatan'];
-    $potensi_bahaya=$_POST['potensi_bahaya'];
-    $resiko=$_POST['resiko'];
-    $RiskControl=$_POST['RiskControl'];
-    $Consequences=$_POST['Consequences'];
-    $Consequences2=$_POST['Consequences2'];
-    $Possibility=$_POST['Possibility'];
-    $Possibility2=$_POST['Possibility2'];
-    $LevelOfRisk=$_POST['LevelOfRisk'];
-    $LevelOfRisk2=$_POST['LevelOfRisk2'];
+    $kegiatan=implode(",", $_POST['kegiatan']);
+    $potensi_bahaya=implode(",", $_POST['potensi_bahaya']);
+    $resiko=implode(",", $_POST['resiko']);
+    $RiskControl=implode(",", $_POST['RiskControl']);
+    $Consequences=implode(",", $_POST['Consequences']);
+    $Consequences2=implode(",", $_POST['Consequences2']);
+    $Possibility=implode(",", $_POST['Possibility']);
+    $Possibility2=implode(",", $_POST['Possibility2']);
+    $LevelOfRisk=implode(",", $_POST['LevelOfRisk']);
+    $LevelOfRisk2=implode(",", $_POST['LevelOfRisk2']);
 
-    $status_pengendalian=$_POST['status_pengendalian'];
-    $penanggung_jawab=$_POST['penanggung_jawab'];
+    $status_pengendalian=implode(",", $_POST['status_pengendalian']);
+    $penanggung_jawab=implode(",", $_POST['penanggung_jawab']);
     
     $loc_img_resiko="images/imgresiko/";
     $loc_img_analysis="images/imganalysis/";

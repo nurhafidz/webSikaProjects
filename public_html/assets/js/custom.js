@@ -312,3 +312,4 @@ function addcolumn(){
     cell2.appendChild(y);
     cell3.appendChild(z);
 }
+
