@@ -26,13 +26,16 @@ if (isset($_POST['save'])) {
     $id=$result->id;
     $status='0';
     $email=$_POST['email'];
+    $firstname=$result->FirstName;
+    $Lastname=$result->LastName;
+    $Pengawas_Pekerjaan=$firstname." ".$lastname;
+    $telp1=$result->Phonenumber;
+
     //f1
     $tanggal_pengajuan=$_POST['tanggal_pengajuan'];
     $jenis_pekerjaan=$_POST['jenis_pekerjaan'];
     $detail_pekerjaan=$_POST['detail_pekerjaan'];
     $lokasi_pekerjaan=$_POST['lokasi_pekerjaan'];
-    $Pengawas_Pekerjaan=$_POST['Pengawas_Pekerjaan'];
-    $telp1=$_POST['telp1'];
     $Pengawas_K3=$_POST['Pengawas_K3'];
     $telp2=$_POST['telp2'];
     //f2
@@ -53,11 +56,11 @@ if (isset($_POST['save'])) {
 
     //form 2
     //f6
-    $tgl_informasi_pekerjaan2=$_POST['tgl_informasi_pekerjaan2'];
-    $jenis_pekerjaan2=$_POST['jenis_pekerjaan2'];
-    $lokasi_pekerjaan2=$_POST['lokasi_pekerjaan2'];
+    $tgl_informasi_pekerjaan2=$_POST['tanggal_pengajuan'];
+    $jenis_pekerjaan2=$_POST['jenis_pekerjaan'];
+    $lokasi_pekerjaan2=$_POST['lokasi_pekerjaan'];
     $perusahaan_pelaksana=$_POST['perusahaan_pelaksana'];
-    $pengawas_pekerjaan=$_POST['pengawas_pekerjaan'];
+    $pengawas_pekerjaan=$firstname." ".$lastname;
     $pelaksana_pekerjaan=implode(",", $_POST['pelaksana_pekerjaan']);
     //f7
     $ck3=implode(",", $_POST['ck3']);

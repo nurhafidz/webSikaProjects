@@ -63,31 +63,28 @@ function myform2() {
             y.style.display = "none";
         }
     }
-function myform3() {
-    var mydiv11 = document.getElementById("mydiv11").value;
-    var mydiv12 = document.getElementById("mydiv12").value;
-    var mydiv13 = document.getElementById("mydiv13").value;
-    var mydiv14 = document.getElementById("mydiv14").value;
-    var mydiv15 = document.getElementById("mydiv15").value;
-    var mydiv16 = document.getElementById("mydiv16").value;
-    var mydiv17 = document.getElementById("mydiv17").value;
-    var mydiv18 = document.getElementById("mydiv18").value;
-    var y = document.getElementById("myDIV3");
-    var z = document.getElementById("myDIV4");
-    if (mydiv11 !="" && mydiv12 !="" && mydiv13 !="" && mydiv14 !="" && mydiv15 !="" && mydiv16 !="" && mydiv17 !="" && mydiv18 !=""){
-        if (y.style.display === "block") {
-            y.style.display = "none";
-            z.style.display = "block";
-            return false;
-            
-        } else {
-            y.style.display = "block";
-            z.style.display = "none";
-        }}
-    else{
-            alert('Isi Data Dengan Lengkap');
+    function myform3() {
+        var mydiv11 = document.getElementById("mydiv11").value;
+        var mydiv12 = document.getElementById("mydiv12").value;
+        var mydiv13 = document.getElementById("mydiv13").value;
+        var mydiv14 = document.getElementById("mydiv14").value;
+        var mydiv17 = document.getElementById("mydiv17").value;
+        var mydiv18 = document.getElementById("mydiv18").value;
+        var y = document.getElementById("myDIV3");
+        var z = document.getElementById("myDIV4");
+        if (mydiv11 !="" && mydiv12 !="" && mydiv13 !="" && mydiv14 !="" && mydiv17 !="" && mydiv18 !=""){
+            if (y.style.display === "block") {
+                y.style.display = "none";
+                z.style.display = "block";
+                return false;
+            } else {
+                y.style.display = "block";
+                z.style.display = "none";
+            }}
+        else{
+                alert('Isi Data Dengan Lengkap');
+            }
         }
-    }
 function myform4() {
 var mydiv21 =  document.getElementById('mydiv21').value;
 var mydiv22 =  document.getElementById('mydiv22').value;
@@ -174,15 +171,11 @@ var e = document.getElementById("myDIV9");
     }
     }
 function myform9() {
-var mydiv61 = document.getElementById("mydiv61").value;
-var mydiv62 = document.getElementById("mydiv62").value;
-var mydiv63 = document.getElementById("mydiv63").value;
 var mydiv64 = document.getElementById("mydiv64").value;
-var mydiv65 = document.getElementById("mydiv65").value;
 var mydiv66 = document.getElementById("mydiv66").value;
 var e = document.getElementById("myDIV9");
 var f = document.getElementById("myDIV10");
-if(mydiv61 !=""&& mydiv62 !=""&& mydiv63 !=""&& mydiv64 !=""&& mydiv65 !=""&& mydiv66 !=""){
+if(mydiv64 !=""&& mydiv66 !=""){
         if (e.style.display === "block") {
             e.style.display = "none";
             f.style.display = "block";
@@ -291,4 +284,31 @@ function validatein4() {
      x.disabled = true;}
     else{
     x.disabled = false;}
+}
+function addinput() {
+    var parent = document.getElementById("addinput");
+    var x = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("id", "idpk");
+    x.setAttribute("name", "pelaksana_pekerjaan[]");
+    parent.appendChild(x);
+}
+function addcolumn(){
+    var table = document.getElementById("table");
+    var x = document.createElement("INPUT");
+    var y = document.createElement("INPUT");
+    var z = document.createElement("INPUT");
+    x.setAttribute("type", "text");
+    x.setAttribute("name", "langkah_pekerjaan[]");
+    y.setAttribute("type", "text");
+    y.setAttribute("name", "potensi_bahaya_dan_resiko[]");
+    z.setAttribute("type", "text");
+    z.setAttribute("name", "tindakan_pengendalian[]");
+    var row = table.insertRow(2);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.appendChild(x);
+    cell2.appendChild(y);
+    cell3.appendChild(z);
 }

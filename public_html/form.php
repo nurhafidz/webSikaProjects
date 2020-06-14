@@ -1,15 +1,16 @@
 <?php
 session_start();
 error_reporting(0);
-include('includes/config.php');
-if(strlen($_SESSION['emplogin'])==0)
-    {   
-header('location:index.php');
+include ('includes/config.php');
+if (strlen($_SESSION['emplogin']) == 0)
+{
+    header('location:index.php');
 }
-else{
-$eid=$_SESSION['emplogin'];
+else
+{
+    $eid = $_SESSION['emplogin'];
 
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,42 +53,15 @@ textarea {
 }
 
 </style>
-
 <script>
-function addinput() {
-    var parent = document.getElementById("addinput");
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "text");
-    x.setAttribute("id", "idpk");
-    x.setAttribute("name", "pelaksana_pekerjaan[]");
-    parent.appendChild(x);
-}
-function addcolumn(){
-    var table = document.getElementById("table");
-    var x = document.createElement("INPUT");
-    var y = document.createElement("INPUT");
-    var z = document.createElement("INPUT");
-    x.setAttribute("type", "text");
-    x.setAttribute("name", "langkah_pekerjaan[]");
-    y.setAttribute("type", "text");
-    y.setAttribute("name", "potensi_bahaya_dan_resiko[]");
-    z.setAttribute("type", "text");
-    z.setAttribute("name", "tindakan_pengendalian[]");
-    var row = table.insertRow(2);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    cell1.appendChild(x);
-    cell2.appendChild(y);
-    cell3.appendChild(z);
-}
 
 </script>
+
     </head>
     <body>
-  <?php include('includes/header.php');?>
+  <?php include ('includes/header.php'); ?>
             
-       <?php include('includes/sidebar.php');?>
+       <?php include ('includes/sidebar.php'); ?>
    <main class="mn-inner">
                 <div class="row">
                     <div class="col s12">
@@ -138,15 +112,7 @@ function addcolumn(){
                                             <label for="">Lokasi Pekerjaan </label>
                                             <input required id="mydiv14"  type="text" name="lokasi_pekerjaan" class="validate" autocomplete="off"   >
                                         </div>
-                                        <p for="">Pengawas Pekerjaan</p>
-                                        <div class="input-field col s6">
-                                            <label for="">Nama Lengkap</label>
-                                            <input required id="mydiv15"  type="text" name="Pengawas_Pekerjaan" class="validate" autocomplete="off"   >
-                                        </div>
-                                        <div class="input-field col s6">
-                                            <label for="">Nomor Telepon</label>
-                                            <input required id="mydiv16"  type="text" name="telp1" class="validate" autocomplete="off"   >
-                                        </div>
+                                        
                                         <p for="">Pengawas K3</p>
                                         <div class="input-field col s6">
                                             <label for="">Nama Lengkap</label>
@@ -350,25 +316,10 @@ function addcolumn(){
                                     <div id="myDIV9" style="display: none;" >
                                         <h5>A. INFORMASI PEKERJAAN</h5>
                                         <br>
-                                        <div class="input-field">
-                                            <label for="">Tanggal</label>
-                                            <input required id="mydiv61"  type="date" name="tgl_informasi_pekerjaan2" class="validate datepicker" autocomplete="off"  >
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="">Jenis Pekerjaan </label>
-                                            <input required id="mydiv62"  type="text" name="jenis_pekerjaan2" autocomplete="off"  >
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="">Lokasi </label>
-                                            <input required id="mydiv63"  type="text" name="lokasi_pekerjaan2" autocomplete="off"  >
-                                        </div>
+                                        
                                         <div class="input-field">
                                             <label for="">Perusahaan Pelaksana Pekerjaan </label>
                                             <input required id="mydiv64"  type="text" name="perusahaan_pelaksana" autocomplete="off"  >
-                                        </div>
-                                        <div class="input-field">
-                                            <label for="">Pengawas Pekerjaan </label>
-                                            <input required id="mydiv65"  type="text" name="pengawas_pekerjaan" autocomplete="off"  >
                                         </div>
                                         <div class="input-field">
                                             <label for="">Pelaksana Pekerjaan </label><br>
@@ -577,6 +528,7 @@ function addcolumn(){
                                             <label for="mydiv109"> Potensi Bahaya</label>
                                             <textarea cols="1" required  type="text" name="potensi_bahaya" class="custom-file-input"  id="mydiv109"></textarea>
                                         </div>
+                                        
                                         <hr>
                                         <div class="input-field ">
                                             <label for="mydiv1010"> Resiko</label>
@@ -604,10 +556,6 @@ function addcolumn(){
                                         <div class="input-field ">
                                             <label for="mydiv1011"> Kemungkinan</label>
                                             <textarea cols="1" required  type="text" name="Consequences2" class="custom-file-input"  id="mydiv1011"></textarea>
-                                        </div>
-                                        <div class="input-field ">
-                                            <label for="mydiv1011"> Kemungkinan</label>
-                                            <textarea cols="1" required  type="text" name="Possibility2" class="custom-file-input"  id="mydiv1011"></textarea>
                                         </div>
                                         <div class="input-field ">
                                             <label for="mydiv1013"> Tingkat Resiko</label>
@@ -648,6 +596,7 @@ function addcolumn(){
         <script src="assets/js/custom.js"></script>
         <script src="assets/js/pages/form_elements.js"></script>
 
-    </body>
+    
 </html>
-<?php } ?> 
+<?php
+} ?>
